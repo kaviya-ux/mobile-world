@@ -15,7 +15,7 @@ Mobile World is a beginner-friendly static website for exploring smartphones by 
 
 ## Folder Structure
 
-- `assets/images/site/` - General website images and icons
+- `assets/images/site/` - General website images and icons.
 - `assets/images/phones/` - Phone product images
 - `products/` - Product detail HTML pages
 
