@@ -1,0 +1,363 @@
+<html lang="en" >
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<title>Mobile World</title>
+		<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+
+		<style>
+			.product-gallery-main {
+				aspect-ratio: 1 / 1;
+				border-radius: 22px;
+				background: #ffffff;
+				padding: 24px;
+				box-shadow: 0 3px 10px rgba(42, 24, 52, 0.16);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+			.product-gallery-main img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+			.product-gallery-thumbs {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 12px;
+			}
+			.product-gallery-thumbs img {
+				width: 100%;
+				aspect-ratio: 1 / 1;
+				height: auto;
+				object-fit: cover;
+				border-radius: 8px;
+				background: #ffffff;
+				box-shadow: 0 2px 8px rgba(42, 24, 52, 0.14);
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body class="bg-[#fef7ff]">
+	<header class="sticky top-0 z-50 bg-[#fef7ff]/95 backdrop-blur-md border-b border-[#eadff1] shadow-sm">
+		<div class="mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+			<a class="font-[Plus_Jakarta_Sans] text-[24px] font-bold text-[#630ed4] tracking-normal" href="../index.html">Mobile World</a>
+			<nav class="hidden md:flex items-center gap-8">
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="../index.html">Home</a>
+				<a class="text-[14px] font-semibold text-[#630ed4] border-b-2 border-[#630ed4] pb-1 transition-colors" href="../category.html">Categories</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="../best-specs.html">Best Specs</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="../accessories.html">accessories</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="../about.html">About Us</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="../contact.html">Contact</a>
+			</nav>
+			<a class="hidden md:inline-flex items-center justify-center rounded-full bg-[#630ed4] px-5 py-2 text-[14px] font-bold text-white shadow-sm transition-all hover:bg-[#520bb4]" href="../sign-in.html">Sign In</a>
+			<details class="relative md:hidden">
+				<summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md text-[#4a4455] hover:bg-[#f3ebfa]">
+					<span class="material-symbols-outlined">menu</span>
+				</summary>
+				<div class="absolute right-0 mt-3 w-56 rounded-lg border border-[#eadff1] bg-white p-2 shadow-lg">
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="../index.html">Home</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#630ed4] bg-[#f3ebfa]" href="../category.html">Categories</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="../best-specs.html">Best Specs</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="../accessories.html">accessories</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="../about.html">About Us</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="../contact.html">Contact</a>
+					<a class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#630ed4] px-4 py-2 text-[14px] font-bold text-white hover:bg-[#520bb4]" href="../sign-in.html">Sign In</a>
+				</div>
+			</details>
+		</div>
+	</header>
+	<!-- Page header and navigation -->
+		<main class="max-w-7xl mx-auto px-4 md:px-6 py-20">
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+				<div class="lg:col-span-5 space-y-4">
+					<div class="product-gallery-main">
+						<img src="../assets/images/phones/cmf-phone-2-pro/main.jpeg" alt="Main phone image">
+					</div>
+					<div class="product-gallery-thumbs">
+						<img src="../assets/images/phones/cmf-phone-2-pro/angle-1.webp" alt="Phone detail image 1">
+						<img src="../assets/images/phones/cmf-phone-2-pro/angle-2.webp" alt="Phone detail image 2">
+						<img src="../assets/images/phones/cmf-phone-2-pro/angle-3.webp" alt="Phone detail image 3">
+					</div>
+				</div>
+				<div class="lg:col-span-7 space-y-6 rounded-2xl bg-white shadow-xl p-6">
+					<div class="flex flex-col md:flex-row justify-between gap-4 mb-4">
+						<div class="flex items-center gap-2 mb-2">
+							<span class="bg-purple-100 text-[#8c0053] px-3 py-1 rounded-lg text-[14px] font-semibold">CMF by Nothing</span>
+						</div>
+						<h1 class="text-[32px] font-bold text-[#1d1a24]">CMF Phone 2 Pro</h1>
+						<div class="flex items-center gap-2 mt-2">
+							<div class="flex text-[#FFB800]">
+								<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+								<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+								<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+								<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+								<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							</div>
+							<span class="text-[14px] text-[#4a4455]">4.6/5 (9,937 Ratings)</span>
+						</div>
+						<div class="text-left md:text-right">
+							<div class="text-[28px] font-bold text-[#630ed4]">₹18,999</div>
+							<p class="text-[14px] text-[#4a4455]">Incl. of all taxes</p>
+						</div>
+					</div>
+		<!-- Main content -->
+						<h2 class="text-[24px] font-semibold mb-4">Technical Specifications</h2>
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+						<!-- Product image gallery -->
+							<div class="p-4 rounded-xl bg-[#f9f1ff] flex items-start gap-3">
+								<div class="w-12 h-12 rounded-lg bg-[#630ed4]/10 flex items-center justify-center shrink-0">
+									<span class="material-symbols-outlined text-[#630ed4]">memory</span>
+								</div>
+								<div>
+								<p class="text-[14px] text-[#4a4455]">Processor</p>
+								<p class="text-[18px] font-semibold">MediaTek Dimensity 7300 Pro 5G</p>
+								</div>
+							</div>
+						<!-- Technical specifications -->
+							<div class="p-4 rounded-xl bg-[#f9f1ff] flex items-start gap-3">
+								<div class="w-12 h-12 rounded-lg bg-[#006591]/10 flex items-center justify-center shrink-0">
+									<span class="material-symbols-outlined text-[#006591]">smartphone</span>
+								</div>
+								<div>
+									<p class="text-[14px] text-[#4a4455]">Display</p>
+									<p class="text-[18px] font-semibold">6.77" FHD+ AMOLED • 120Hz</p>
+								</div>
+							</div>
+						<!-- Product overview -->
+							<div class="p-4 rounded-xl bg-[#f9f1ff] flex items-start gap-3">
+								<div class="w-12 h-12 rounded-lg bg-[#9b005c]/10 flex items-center justify-center shrink-0">
+								<span class="material-symbols-outlined text-[#9b005c]">photo_camera</span>
+								</div>
+								<div>
+									<p class="text-[14px] text-[#4a4455]">Main Camera</p>
+									<p class="text-[18px] font-semibold">50MP + 50MP + 8MP Triple Rear Camera</p>
+								</div>
+							</div>
+						<!-- Why this phone stands out -->
+							<div class="p-4 rounded-xl bg-[#f9f1ff] flex items-start gap-3">
+								<div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0">
+									<span class="material-symbols-outlined ">battery_full</span>
+								</div>
+								<div>
+									<p class="text-[14px] text-[#4a4455]">Battery & Charging</p>
+									<p class="text-[18px] font-semibold">5000mAh | 33W Fast Charging</p>
+								</div>
+							</div>
+						<!-- Customer reviews -->
+							<div class="p-4 rounded-xl bg-[#f9f1ff] flex items-start gap-3 md:col-span-2">
+								<div class="w-12 h-12 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0">
+									<span class="material-symbols-outlined text-orange-600">storage</span>
+								</div>
+								<div>
+									<p class="text-[14px] text-[#4a4455]">Memory</p>
+									<p class="text-[18px] font-semibold">8GB RAM | 128GB Storage</p>
+								</div>
+							</div>
+							<!-- Related smartphones -->
+							<div class="p-4 rounded-xl bg-[#f9f1ff] flex items-start gap-3 md:col-span-2">
+								<div class="w-12 h-12 rounded-lg bg-sky-500/10 flex items-center justify-center shrink-0">
+									<span class="material-symbols-outlined text-sky-600">android</span>
+								</div>
+								<div>
+									<p class="text-[14px] text-[#4a4455]">Software</p>
+									<p class="text-[18px] font-semibold">Android 15 (Nothing OS 3.2)</p>
+								</div>
+							</div>
+						</div>
+					<!-- Footer -->
+						<div class="mt-6">
+							<h3 class="text-[24px] font-semibold mb-3">Product Overview</h3>
+							<p class="text-[16px] text-[#4a4455]">The CMF Phone 2 Pro is a stylish mid-range smartphone that combines premium design with reliable performance
+							and an excellent camera system. Powered by the MediaTek Dimensity 7300 Pro processor, it delivers a smooth experience for multitasking, gaming, 
+							and entertainment. Its vibrant AMOLED display offers immersive visuals, while the triple-camera setup captures detailed photos in various lighting
+							conditions. Running on Nothing OS, the phone provides a clean, fast, and user-friendly software experience, making it an outstanding choice for 
+							users seeking premium features at an affordable price.</p>
+						</div>
+						<div class="mt-6 grid grid-cols-2 gap-4">
+							<a href="samsung-galaxy-f06-5g.html">
+								<button class="w-full h-12 bg-[#630ed4] text-white rounded-xl font-semibold flex items-center justify-center gap-2">
+									<span class="material-symbols-outlined">west</span>Previous
+								</button>
+							</a>
+							<a href="vivo-t4-5g.html">
+								<button class="w-full h-12 bg-[#630ed4] text-white rounded-xl font-semibold flex items-center justify-center gap-2">
+									next<span class="material-symbols-outlined">east</span>
+								</button>
+							</a>
+						</div>
+					</div>
+				</div>
+			<!-- Gallery image swap behavior -->
+			<section class="mt-12 space-y-6">
+				<h2 class="text-[32px] font-bold text-center">Why the CMF Phone 2 Pro stands out</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+			<!-- Page header and navigation -->
+					<div class="rounded-[24px] bg-white p-6 text-center shadow-md">
+						<div class="w-16 h-16 bg-[#630ed4]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="material-symbols-outlined text-[#630ed4] text-3xl">speed</span>
+						</div>
+						<h3 class="text-[20px] font-semibold mb-2">Powerful Mid-Range Performance</h3>
+						<p class="text-[16px] text-[#4a4455]">The MediaTek Dimensity 7300 Pro processor delivers smooth gaming, fast app launches, and
+						seamless multitasking, making it perfect for both work and entertainment.</p>
+					</div>
+			<!-- Main content -->
+					<div class="rounded-[24px] bg-white p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
+						<div class="w-16 h-16 bg-[#006591]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="material-symbols-outlined text-[#006591] text-3xl">battery_charging_full</span>
+						</div>
+						<h3 class="text-[20px] font-semibold mb-2">Efficient All-Day Battery</h3>
+						<p class="text-[16px] text-[#4a4455]">The 5000mAh battery provides dependable all-day power, while the 33W fast charging quickly gets 
+						you back to full battery whenever needed.</p>
+					</div>
+			<!-- Product image gallery -->
+					<div class="rounded-[24px] bg-white p-6 text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)]">
+						<div class="w-16 h-16 bg-[#9b005c]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+							<span class="material-symbols-outlined text-[#9b005c] text-3xl">photo_camera</span>
+						</div>
+						<h3 class="text-[20px] font-semibold mb-2">Advanced Triple Camera System</h3>
+						<p class="text-[16px] text-[#4a4455]">The 50MP triple-camera setup captures sharp, vibrant, and detailed photos with excellent color accuracy,
+						making it ideal for photography enthusiasts.</p>
+					</div>
+				</div>
+			</section>
+	<!-- Technical specifications -->
+			<section class="mt-12 space-y-6">
+				<div class="flex flex-col md:flex-row justify-between items-end gap-6">
+					<div>
+						<h2 class="text-[32px] font-bold mb-2">User Reviews</h2>
+						<div class="flex items-center gap-4">
+							<div class="text-[40px] font-bold text-[#630ed4]">4.6</div>
+							<div>
+								<div class="flex text-[#FFB800]">
+									<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+									<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+									<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+									<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+									<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+								</div>
+								<p class="text-[16px] text-[#4a4455]">Based on 12,234 Ratings</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		<!-- Product overview -->
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="rounded-[24px] bg-white p-6 shadow-md">
+						<h4 class="font-bold text-[#1d1a24]">Nithra</h4>
+						<div class="flex text-[#FFB800] my-2">
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
+						</div>
+						<p class="text-[16px] text-[#4a4455]">The design feels premium, Nothing OS is incredibly smooth, and the display is gorgeous.
+						The cameras perform really well, especially in daylight. Definitely one of the best phones in this price range.</p>
+						<p class="text-[14px] text-[#7b7487] mt-2">May 14, 2025</p>
+					</div>
+			<!-- Why this phone stands out -->
+					<div class="rounded-[24px] bg-white p-6 shadow-md">
+						<h4 class="font-bold text-[#1d1a24]">Ananya</h4>
+						<div class="flex text-[#FFB800] my-2">
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+							<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
+						</div>
+						<p class="text-[16px] text-[#4a4455]">I've been using this phone for a few weeks and it's been fantastic. Performance is fast, 
+						battery easily lasts a full day, and the software experience is clean without unnecessary apps.</p>
+						<p class="text-[14px] text-[#7b7487] mt-2">Apr 28 , 2025</p>
+					</div>
+				</div>
+			</section>
+	<!-- Customer reviews -->
+			<section class="mt-12">
+				<h2 class="text-[32px] font-bold mb-6">Related Smartphones</h2>
+				<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+		<!-- Related smartphones -->
+					<div class="rounded-[24px] bg-white p-4 shadow-md">
+						<div class="aspect-square bg-[#f3ebfa] rounded-lg mb-3">
+						<img class="w-full h-full object-cover" src="../assets/images/phones/xiaomi-15/main.jpeg">
+						</div>
+						<h4 class="font-bold text-[#1d1a24]">Xiaomi 15</h4>
+						<p class="text-[#630ed4] font-semibold">₹59,999</p>
+					</div>
+		<!-- Footer -->
+					<div class="rounded-[24px] bg-white p-4 shadow-md">
+						<div class="aspect-square bg-[#f3ebfa] rounded-lg  mb-3">
+							<img class="w-full h-full object-cover" src="../assets/images/phones/samsung-galaxy-s25/main.jpeg">
+						</div>
+						<h4 class="font-bold text-[#1d1a24]">Samsung Galaxy S25</h4>
+						<p class="text-[#630ed4] font-semibold">₹74,999</p>
+					</div>
+		<!-- Gallery image swap behavior -->
+					<div class="rounded-[24px] bg-white p-4 shadow-md">
+						<div class="aspect-square bg-[#f3ebfa] rounded-lg  mb-3">
+							<img class="w-full h-full object-cover" src="../assets/images/phones/apple-iphone-16/main.jpeg">
+						</div>
+						<h4 class="font-bold text-[#1d1a24]">Apple iPhone 16</h4>
+						<p class="text-[#630ed4] font-semibold">₹74,900</p>
+					</div>
+		<!-- Page header and navigation -->
+					<div class="rounded-[24px] bg-white p-4 shadow-md">
+						<div class="aspect-square bg-[#f3ebfa] rounded-lg mb-3">
+							<img class="w-full h-full object-cover" src="../assets/images/phones/xiaomi-15-ultra/main.jpeg">
+						</div>
+						<h4 class="font-bold text-[#1d1a24]">Xiaomi 15 Ultra</h4>
+						<p class="text-[#630ed4] font-semibold">₹1,09,999</p>
+					</div>
+				</div>
+			</section>
+		</main>
+	<!-- Main content -->
+		<footer class="bg-white mt-12">
+			<div class="flex flex-col md:flex-row justify-between items-center px-6 py-8 max-w-7xl mx-auto w-full gap-4">
+				<div class="flex flex-col items-center md:items-start gap-1">
+				<div class="text-[24px] font-bold text-[#630ed4]">Mobile World</div>
+				<p class="text-[16px] text-[#4a4455]">© 2024 Mobile World. All rights reserved.</p>
+				</div>
+				<div class="flex flex-wrap justify-center gap-6">
+					  <a href="../index.html" class="hover:text-purple-600">Home</a>
+					  <a href="../category.html" class="hover:text-purple-600">Categories</a>
+					  <a href="../best-specs.html" class="hover:text-purple-600">Best specs</a>
+					  <a href="../accessories.html"class="hover:text-purple-600">accessories</a>
+					  <a href="../about.html" class="hover:text-purple-600">About Us</a>
+					  <a href="../contact.html" class="hover:text-purple-600">Contact</a>
+				</div>
+				<div class="flex gap-3">
+					<a class="w-10 h-10 rounded-full bg-[#f3ebfa] flex items-center justify-center text-[#630ed4] hover:bg-[#630ed4] hover:text-white " href="#">
+					<span class="material-symbols-outlined text-[20px]">public</span>
+					</a>
+					<a class="w-10 h-10 rounded-full bg-[#f3ebfa] flex items-center justify-center text-[#630ed4] hover:bg-[#630ed4] hover:text-white" href="#">
+					<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+					</a>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Swaps the selected thumbnail into the main gallery image. -->
+		<script>
+			const mainGalleryImage = document.querySelector(".product-gallery-main img");
+			const galleryThumbnails = document.querySelectorAll(".product-gallery-thumbs img");
+
+			galleryThumbnails.forEach((thumbnail) => {
+				thumbnail.addEventListener("click", () => {
+					const currentMainSrc = mainGalleryImage.src;
+					const currentMainAlt = mainGalleryImage.alt;
+
+					mainGalleryImage.src = thumbnail.src;
+					mainGalleryImage.alt = thumbnail.alt;
+
+					thumbnail.src = currentMainSrc;
+					thumbnail.alt = currentMainAlt;
+				});
+			});
+		</script>
+</body>
+</html>
