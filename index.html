@@ -1,10 +1,10 @@
 <html>
 	<head>
-		<title>MOBILE WORLD</title>
+		<title>Mobile World</title>
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
-		</script>
-			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<header class="sticky top-0 z-50 bg-[#fef7ff]/95 backdrop-blur-md border-b border-[#eadff1] shadow-sm">
@@ -35,7 +35,7 @@
 			</details>
 		</div>
 	</header>
-		
+
 		<!-- HERO SECTION -->
 		<section class="max-w-6xl mx-auto px-7 py-16 md:py-24 flex flex-col items-center text-center ">
 			<h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight mb-4 mt-20">
@@ -57,10 +57,8 @@
 				<h2 class="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-8">
 					Top Smartphone Brands
 				</h2>
-				<!-- Placeholder box container for adding brand logos later -->
-				<div class="bg-purple-200 h-25">
-				<marquee>
-				<div class="grid grid-cols-12 gap-6 my-9 md:grid-cols-12 gap-40">
+				<div class="bg-purple-200 h-25 overflow-hidden">
+				<div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-6 my-9 px-6">
 					<div class="flex items-center justify-center font-semibold text-2xl">Apple</div>
 					<div class="flex items-center justify-center font-semibold text-2xl">Samsung</div>
 					<div class="flex items-center justify-center font-semibold text-2xl">OnePlus</div>
@@ -74,30 +72,29 @@
 					<div class="flex items-center justify-center font-semibold text-2xl">Motorola</div>
 					<div class="flex items-center justify-center font-semibold text-2xl">POCO</div>
 				</div>
-				</marquee>
 				</div>
 		</section>
 		<!-- why choose MW-->
 		<h1 class="text-purple-900 font-extrabold text-3xl text-center ">Why Choose Mobile World</h1><br>
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto p-4 ">
-				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 trasition">
+				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 transition">
 					<h3 class="text-2xl font-bold text-center">Trusted Info</h3><br>
 					<p class="text-left">We organize smartphone details in a simple and easy-to-understand format.</p>
 				</div>
-				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 trasition">
+				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 transition">
 					<h3 class="text-2xl font-bold text-center">Budget friendly</h3><br>
 					<p>Find the best smartphones across different price ranges.</p>
 				</div>
-				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 trasition">
+				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 transition">
 					<h3 class="text-2xl font-bold text-center"> Easy Navigation </h3><br>
 					<p>Explore different categories quickly with a clean layout. </p>
 				</div>
-				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 trasition">
+				<div class="bg-purple-50 p-6 rounded-xl items-center justify-center border border-solid border-gray-800 shadow-md shadow-black hover:bg-purple-200 hover:scale-104 transition">
 					<h3 class="text-2xl font-bold text-center">Responsive Design </h3><br>
 					<p>Optimized for desktop, tablet, and mobile devices. </p>
 				</div>
 			</div>
-			
+
 			<!-- STATISTICS SECTION -->
 	<section class="max-w-6xl mx-auto px-6 py-12 my-10 bg-purple-50 rounded-3xl border border-purple-200 shadow-md">
 		<h2 class="text-3xl font-extrabold text-purple-900 text-center mb-8">Mobile World in Numbers</h2>
@@ -128,55 +125,51 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<!-- FAQ Section -->
-		<section class="bg-purple-100 mx-20 rounded-2xl h-auto  ">
-			<div class="max-w-2xl mx-auto px-lg text-xl"><br><br>
+		<section class="bg-purple-100 mx-4 md:mx-20 rounded-2xl h-auto  ">
+			<div class="max-w-2xl mx-auto px-4 md:px-8 text-xl"><br><br>
 				<h2 class="font-bold text-3xl text-center text-purple-700">Frequently Asked Questions</h2><br>
-	<!-- Accordion Item 1 -->
-					<details class="group bg-surface bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 trasition">
-						<summary class="flex justify-between items-center p-lg cursor-pointer font-bold">
+					<details class="group bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 transition">
+						<summary class="flex justify-between items-center cursor-pointer font-bold list-none">
 							How often are Mobile specs updated?
-							<span class="group-open:rotate-180"><img src="assets/images/site/less-than.png" class="h-5"></span>
+							<span class="text-purple-700 transition-transform group-open:rotate-180">▾</span>
 						</summary><br>
-						<div class="px-lg pb-lg text-xl">
+						<div class="px-lg pb-lg text-base">
 							Our database is updated daily as new devices are announced and benchmarked. We source data directly from manufacturer white papers and verified testing labs.
 						</div>
 					</details><br>
-	<!-- Accordion Item 2 -->
-					<details class="group bg-surface bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 trasition">
-						<summary class="flex justify-between items-center p-lg cursor-pointer font-bold">
+					<details class="group bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 transition">
+						<summary class="flex justify-between items-center cursor-pointer font-bold list-none">
 							What does the "Mobile World Rating" mean?
-							<span class="group-open:rotate-180"><img src="assets/images/site/less-than.png" class="h-5"></span>
+							<span class="text-purple-700 transition-transform group-open:rotate-180">▾</span>
 						</summary><br>
-						<div class="px-lg pb-lg text-on-surface-variant">
+						<div class="px-lg pb-lg text-base">
 							It's an aggregate score based on processor performance, display quality, camera output, and battery life, weighted against the device's launch price to determine value.
 						</div>
 					</details><br>
-	<!-- Accordion Item 3 -->
-					<details class="group bg-surface bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 trasition">
-						<summary class="flex justify-between items-center p-lg cursor-pointer font-bold">
-							Can I compare two Mobile side-by-side?
-							<span class="group-open:rotate-180"><img src="assets/images/site/less-than.png" class="h-5"></span>
+					<details class="group bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 transition">
+						<summary class="flex justify-between items-center cursor-pointer font-bold list-none">
+							Can I compare two phones side-by-side?
+							<span class="text-purple-700 transition-transform group-open:rotate-180">▾</span>
 						</summary><br>
-						<div class="px-lg pb-lg text-on-surface-variant">
+						<div class="px-lg pb-lg text-base">
 							Yes! Simply use the 'View Details' button on any phone card and look for the 'Compare' option on the device specification page.
 						</div>
 					</details><br>
-	<!-- Accordion Item 4 -->
-					<details class="group bg-surface bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 trasition">
-						<summary class="flex justify-between items-center p-lg cursor-pointer font-bold">
-								Do you sell the Mobile directly?
-								<span class="group-open:rotate-180"><img src="assets/images/site/less-than.png" class="h-5"></span>
+					<details class="group bg-pink-200 rounded-xl shadow-md shadow-black p-4 mx-auto sm:mx-10 hover:scale-104 transition">
+						<summary class="flex justify-between items-center cursor-pointer font-bold list-none">
+								Do you sell the phones directly?
+								<span class="text-purple-700 transition-transform group-open:rotate-180">▾</span>
 						</summary><br>
-						<div class="px-lg pb-lg ">
-							No, Mobile World is an information portal. We provide links to trusted retailers, but we do not sell hardware directly to ensure our reviews remain unbased.
+						<div class="px-lg pb-lg text-base">
+							No, Mobile World is an information portal. We provide links to trusted retailers, but we do not sell hardware directly, so our reviews stay unbiased.
 						</div>
 					</details>
 				</div><br><br>
 		</section>
-<!--footer-->
-    <footer class="bg-purple-100 border-t border-gray-200 mt-12">
+
+		<footer class="bg-purple-100 border-t border-gray-200 mt-12">
 		<div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
 			<div class="grid gap-8 md:grid-cols-4">
 				<div>
@@ -209,16 +202,16 @@
 					  <li><a href="contact.html" class="hover:text-purple-600">Contact</a></li>
 					</ul>
 				</div>
-				
+
 				<div>
 					<h3 class="font-bold text-xl text-purple-600 mb-4">Contact</h3>
 					<p class="mb-2">📍 Chennai, Tamil Nadu, India</p>
-					<p class="tmb-2">✉️ contact@mobileworld.com</p>
-					<p class=" mb-2">📞 +91 98765 43201</p>
+					<p class="mb-2">✉️ contact@mobileworld.com</p>
+					<p class="mb-2">📞 +91 98765 43201</p>
 				</div>
 			</div>
 			<div class="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-blue-500">© 2024 Mobile World. All rights reserved.</div>
 		</div>
-    </footer>	
+    </footer>
 	</body>
 </html>
