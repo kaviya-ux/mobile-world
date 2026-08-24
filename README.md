@@ -13,7 +13,11 @@ Mobile World is a beginner-friendly static website for exploring smartphones by 
 - `sign-in.html` - Sign-in form demo
 - `products/` - Individual phone detail pages
 
+## Folder Structure
 
+- `assets/images/site/` - General website images and icons.
+- `assets/images/phones/` - Phone product images
+- `products/` - Product detail HTML pages
 
 ## How To Open
 
