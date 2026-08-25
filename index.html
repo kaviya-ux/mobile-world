@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile World | Find Your Perfect Smartphone</title>
+    <title>Mobile World — Smartphone Intelligence & Hardware Benchmarks</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS v4 CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
+        :root {
+            --primary: #630ed4;
+            --primary-light: #7c22f0;
+            --primary-dark: #4b08a8;
+            --accent: #ec4899;
+            --surface-subtle: #f8fafc;
+        }
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-display {
+            font-family: 'Space Grotesk', sans-serif;
         }
         @keyframes marquee {
             0% { transform: translateX(0%); }
@@ -20,70 +35,94 @@
         .animate-marquee {
             display: flex;
             width: max-content;
-            animation: marquee 25s linear infinite;
+            animation: marquee 30s linear infinite;
         }
         .animate-marquee:hover {
             animation-play-state: paused;
         }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(99, 14, 212, 0.15), rgba(236, 72, 153, 0.08), transparent 70%);
+        }
+        .phone-canvas {
+            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
     </style>
 </head>
-<body class="bg-[#faf8fd] text-slate-800 antialiased flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen antialiased selection:bg-[#630ed4] selection:text-white">
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-100 shadow-xs transition-all">
-        <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <!-- FLOATING TOP NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+        <div class="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
             <!-- Brand Logo -->
-            <a class="flex items-center gap-2 text-2xl font-extrabold text-[#630ed4] tracking-tight hover:opacity-90 transition" href="index.html">
-                <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-600 text-white shadow-md shadow-purple-200">
-                    <span class="material-symbols-outlined text-xl">smartphone</span>
-                </span>
-                <span>Mobile<span class="text-slate-900">World</span></span>
+            <a class="flex items-center gap-3 group" href="index.html">
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#630ed4] to-[#a855f7] text-white shadow-lg shadow-purple-600/30 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
+                    <span class="material-symbols-outlined text-2xl">devices_other</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">
+                        Mobile<span class="text-[#630ed4]">World</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold tracking-widest uppercase text-slate-400 mt-1">Hardware Intelligence</span>
+                </div>
             </a>
 
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center gap-1 lg:gap-2">
-                <a class="px-3.5 py-2 text-sm font-bold text-[#630ed4] bg-purple-50 rounded-full transition-colors" href="index.html">Home</a>
-                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="category.html">Categories</a>
-                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="best-specs.html">Best Specs</a>
-                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="accessories.html">Accessories</a>
-                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="about.html">About Us</a>
-                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="contact.html">Contact</a>
+            <!-- Desktop Navigation Pills -->
+            <nav class="hidden lg:flex items-center gap-1.5 bg-slate-100/90 p-1.5 rounded-full border border-slate-200/80 shadow-inner">
+                <a class="px-5 py-2 text-sm font-bold text-white bg-[#630ed4] rounded-full shadow-md shadow-purple-600/25" href="index.html">Home</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="category.html">Categories</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="best-specs.html">Best Specs</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="accessories.html">Accessories</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="about.html">About Us</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="contact.html">Contact</a>
             </nav>
 
-            <!-- Sign In CTA Button -->
+            <!-- Right CTA Area -->
             <div class="hidden md:flex items-center gap-3">
-                <a class="inline-flex items-center justify-center rounded-full bg-[#630ed4] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-purple-200 transition-all hover:bg-[#520bb4] hover:shadow-lg hover:-translate-y-0.5" href="sign-in.html">
+                <a href="category.html" class="flex items-center gap-2 text-xs font-bold text-slate-700 bg-white hover:bg-slate-50 border border-slate-200 px-4 py-2.5 rounded-full shadow-xs hover:border-purple-300 transition">
+                    <span class="material-symbols-outlined text-base text-[#630ed4]">search</span>
+                    <span>Search 21 Phones</span>
+                </a>
+                <a class="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-slate-900/10 transition-all hover:bg-[#630ed4] hover:shadow-lg hover:shadow-purple-600/25 hover:-translate-y-0.5" href="sign-in.html">
                     Sign In
                 </a>
             </div>
 
-            <!-- Mobile Menu -->
-            <details class="relative md:hidden group">
-                <summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-xl border border-purple-100 text-slate-700 hover:bg-purple-50 focus:outline-none">
+            <!-- Mobile Hamburger Button -->
+            <details class="relative lg:hidden group">
+                <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 hover:bg-purple-50 focus:outline-none transition shadow-xs">
                     <span class="material-symbols-outlined text-2xl">menu</span>
                 </summary>
-                <div class="absolute right-0 mt-3 w-64 origin-top-right rounded-2xl border border-purple-100 bg-white p-3 shadow-xl backdrop-blur-lg">
-                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-bold text-[#630ed4] bg-purple-50" href="index.html">
-                        <span class="material-symbols-outlined text-lg">home</span> Home
+                <div class="absolute right-0 mt-3 w-72 origin-top-right rounded-3xl border border-slate-200 bg-white/95 p-4 shadow-2xl backdrop-blur-2xl space-y-1">
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold text-[#630ed4] bg-purple-50" href="index.html">
+                        <span class="material-symbols-outlined text-xl">home</span> Home
                     </a>
-                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="category.html">
-                        <span class="material-symbols-outlined text-lg">category</span> Categories
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="category.html">
+                        <span class="material-symbols-outlined text-xl">grid_view</span> Categories
                     </a>
-                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="best-specs.html">
-                        <span class="material-symbols-outlined text-lg">bolt</span> Best Specs
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="best-specs.html">
+                        <span class="material-symbols-outlined text-xl">bolt</span> Best Specs
                     </a>
-                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="accessories.html">
-                        <span class="material-symbols-outlined text-lg">headphones</span> Accessories
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="accessories.html">
+                        <span class="material-symbols-outlined text-xl">headphones</span> Accessories
                     </a>
-                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="about.html">
-                        <span class="material-symbols-outlined text-lg">info</span> About Us
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="about.html">
+                        <span class="material-symbols-outlined text-xl">info</span> About Us
                     </a>
-                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="contact.html">
-                        <span class="material-symbols-outlined text-lg">mail</span> Contact
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="contact.html">
+                        <span class="material-symbols-outlined text-xl">mail</span> Contact
                     </a>
-                    <div class="mt-2 pt-2 border-t border-purple-50">
-                        <a class="flex w-full items-center justify-center rounded-xl bg-[#630ed4] px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-purple-200 transition hover:bg-[#520bb4]" href="sign-in.html">
-                            Sign In
+                    <div class="pt-3 mt-2 border-t border-slate-100">
+                        <a class="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#630ed4] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-purple-600/25 hover:bg-[#520bb4] transition" href="sign-in.html">
+                            <span>Sign In / Register</span>
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
                         </a>
                     </div>
                 </div>
@@ -91,311 +130,458 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (High-Impact 2-Column Tech Showcase) -->
     <section class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28">
-        <!-- Background Subtle Glow Decor -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-purple-200/40 via-pink-200/30 to-purple-300/20 blur-3xl rounded-full pointer-events-none -z-10"></div>
+        <!-- Ambient Radial Glow -->
+        <div class="hero-glow absolute inset-0 pointer-events-none -z-10"></div>
+        <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] bg-gradient-to-b from-purple-200/40 via-pink-100/30 to-transparent blur-[120px] pointer-events-none -z-10"></div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-            <span class="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50/80 px-4 py-1.5 text-xs md:text-sm font-bold text-purple-700 shadow-xs mb-6">
-                <span class="h-2 w-2 rounded-full bg-purple-600 animate-pulse"></span>
-                ✨ The Smart Smartphone Guide
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
+                    <!-- Pill Tag -->
+                    <div class="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-white/90 backdrop-blur-md px-4 py-1.5 text-xs font-extrabold text-[#630ed4] shadow-sm mb-6">
+                        <span class="flex h-2.5 w-2.5 rounded-full bg-[#630ed4] animate-pulse"></span>
+                        <span>2025 Edition • 21 Verified Smartphones</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.08] mb-6">
+                        Discover & Compare <br class="hidden sm:inline">
+                        <span class="bg-gradient-to-r from-[#630ed4] via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                            Smartphones
+                        </span> with Precision.
+                    </h1>
+
+                    <p class="text-base sm:text-lg lg:text-xl font-medium text-slate-600 mb-8 max-w-2xl leading-relaxed">
+                        Say goodbye to confusing spec sheets. We benchmark clock speeds, camera sensors, and battery endurance across 7 curated budget categories.
+                    </p>
+
+                    <!-- Interactive Quick Finder Box -->
+                    <div class="w-full max-w-2xl bg-white/95 backdrop-blur-xl p-5 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50 mb-8 text-left">
+                        <div class="text-xs font-black uppercase tracking-wider text-slate-400 mb-3 flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm text-[#630ed4]">tune</span>
+                            Instant Device Finder
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                            <div>
+                                <label class="block text-[11px] font-bold text-slate-500 mb-1">Select Budget</label>
+                                <select id="heroBudgetSelect" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold text-slate-800 focus:outline-none focus:border-[#630ed4] cursor-pointer">
+                                    <option value="category.html#under-15k">Under ₹15,000</option>
+                                    <option value="category.html#under-20k">Under ₹20,000</option>
+                                    <option value="category.html#under-30k" selected>Under ₹30,000</option>
+                                    <option value="category.html#under-40k">Under ₹40,000</option>
+                                    <option value="category.html#under-60k">Under ₹60,000</option>
+                                    <option value="category.html#under-80k">Under ₹80,000</option>
+                                    <option value="category.html#above-1l">Above ₹1,00,000</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-slate-500 mb-1">Top Priority</label>
+                                <select id="heroPrioritySelect" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-xs sm:text-sm font-bold text-slate-800 focus:outline-none focus:border-[#630ed4] cursor-pointer">
+                                    <option value="best-specs.html#performance">🚀 Gaming & CPU</option>
+                                    <option value="best-specs.html#camera">📸 Pro Photography</option>
+                                    <option value="best-specs.html#battery">🔋 Marathon Battery</option>
+                                    <option value="category.html">⚖️ Balanced Daily</option>
+                                </select>
+                            </div>
+                            <div class="flex items-end">
+                                <button onclick="window.location.href=document.getElementById('heroBudgetSelect').value" class="w-full bg-[#630ed4] hover:bg-[#520bb4] text-white font-bold py-2.5 px-4 rounded-xl shadow-md shadow-purple-600/30 hover:shadow-lg transition-all flex items-center justify-center gap-1.5 cursor-pointer text-xs sm:text-sm">
+                                    <span>Find Phone</span>
+                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Navigation Pills -->
+                    <div class="flex flex-wrap items-center gap-3">
+                        <a href="category.html" class="inline-flex items-center gap-2 bg-[#630ed4] hover:bg-[#520bb4] text-white font-bold px-7 py-3.5 rounded-full shadow-lg shadow-purple-600/30 hover:shadow-xl hover:-translate-y-0.5 transition-all text-sm">
+                            <span>Browse 7 Budget Tiers</span>
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                        </a>
+                        <a href="best-specs.html" class="inline-flex items-center gap-2 bg-white hover:bg-slate-50 text-slate-800 font-bold px-6 py-3.5 rounded-full border border-slate-200 shadow-xs hover:shadow transition-all text-sm">
+                            <span class="material-symbols-outlined text-[#630ed4] text-lg">trophy</span>
+                            <span>Specs Leaderboard</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Spotlight (Interactive Phone Angle Showcase) -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md">
+                        <!-- Glow Aura -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#630ed4] to-pink-500 rounded-3xl blur-2xl opacity-25 transform rotate-2 scale-105"></div>
+                        
+                        <div class="relative bg-white rounded-3xl border border-slate-200 p-6 sm:p-7 shadow-2xl">
+                            <!-- Card Header -->
+                            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-3 py-1 rounded-full bg-purple-100 text-[#630ed4] text-xs font-black uppercase tracking-wider">Spotlight Device</span>
+                                    <span class="text-xs font-bold text-slate-400">2025 Ultra Flagship</span>
+                                </div>
+                                <div class="flex items-center gap-1 text-amber-500 text-xs font-black">
+                                    <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                    <span>9.9 / 10</span>
+                                </div>
+                            </div>
+
+                            <!-- Phone Canvas & Image Gallery Switcher -->
+                            <div class="relative my-6 rounded-2xl phone-canvas p-6 flex flex-col items-center justify-center">
+                                <img id="heroPhoneMainImg" src="assets/images/phones/samsung-galaxy-s25-ultra/main.jpeg" class="h-64 object-contain transition-all duration-300 drop-shadow-xl" alt="Samsung Galaxy S25 Ultra">
+                                
+                                <!-- Angle Switcher Thumbnails -->
+                                <div class="flex items-center gap-2 mt-4 pt-3 border-t border-slate-200/60 w-full justify-center">
+                                    <button onclick="switchHeroAngle('assets/images/phones/samsung-galaxy-s25-ultra/main.jpeg')" class="h-10 w-10 rounded-xl bg-white border-2 border-[#630ed4] p-1 shadow-xs cursor-pointer hover:scale-105 transition">
+                                        <img src="assets/images/phones/samsung-galaxy-s25-ultra/main.jpeg" class="h-full w-full object-contain">
+                                    </button>
+                                    <button onclick="switchHeroAngle('assets/images/phones/samsung-galaxy-s25-ultra/angle-1.webp')" class="h-10 w-10 rounded-xl bg-white border border-slate-200 p-1 shadow-xs cursor-pointer hover:scale-105 transition">
+                                        <img src="assets/images/phones/samsung-galaxy-s25-ultra/angle-1.webp" class="h-full w-full object-contain">
+                                    </button>
+                                    <button onclick="switchHeroAngle('assets/images/phones/samsung-galaxy-s25-ultra/angle-2.webp')" class="h-10 w-10 rounded-xl bg-white border border-slate-200 p-1 shadow-xs cursor-pointer hover:scale-105 transition">
+                                        <img src="assets/images/phones/samsung-galaxy-s25-ultra/angle-2.webp" class="h-full w-full object-contain">
+                                    </button>
+                                    <button onclick="switchHeroAngle('assets/images/phones/samsung-galaxy-s25-ultra/angle-3.webp')" class="h-10 w-10 rounded-xl bg-white border border-slate-200 p-1 shadow-xs cursor-pointer hover:scale-105 transition">
+                                        <img src="assets/images/phones/samsung-galaxy-s25-ultra/angle-3.webp" class="h-full w-full object-contain">
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Phone Info -->
+                            <div>
+                                <div class="flex items-center justify-between">
+                                    <h3 class="text-2xl font-black text-slate-900">Galaxy S25 Ultra</h3>
+                                    <span class="text-xl font-black text-emerald-600">&#8377;1,17,999</span>
+                                </div>
+                                <p class="text-xs text-slate-500 mt-1 font-medium">Snapdragon 8 Elite • 200MP Quad Cam • S-Pen Titanium</p>
+
+                                <!-- Mini Specs Badges -->
+                                <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+                                    <div class="p-2.5 rounded-2xl bg-slate-50 border border-slate-100">
+                                        <p class="text-[10px] uppercase font-bold text-slate-400">Antutu Score</p>
+                                        <p class="text-xs font-black text-slate-900 mt-0.5">3,050,000+</p>
+                                    </div>
+                                    <div class="p-2.5 rounded-2xl bg-slate-50 border border-slate-100">
+                                        <p class="text-[10px] uppercase font-bold text-slate-400">Main Optics</p>
+                                        <p class="text-xs font-black text-slate-900 mt-0.5">200MP OIS</p>
+                                    </div>
+                                    <div class="p-2.5 rounded-2xl bg-slate-50 border border-slate-100">
+                                        <p class="text-[10px] uppercase font-bold text-slate-400">Battery</p>
+                                        <p class="text-xs font-black text-slate-900 mt-0.5">5000mAh</p>
+                                    </div>
+                                </div>
+
+                                <a href="products/samsung-galaxy-s25-ultra.html" class="mt-5 block w-full text-center bg-slate-900 hover:bg-[#630ed4] text-white font-bold py-3.5 rounded-2xl transition-all shadow-md text-sm">
+                                    View Full Specification Sheet →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND ECOSYSTEM TICKER (12 Major Brands) -->
+    <section class="border-y border-slate-200/80 bg-white/80 py-8 backdrop-blur-md overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 mb-4 text-center">
+            <span class="text-[11px] font-black uppercase tracking-widest text-slate-400">
+                Verified Manufacturer Ecosystems & Optical Partnerships
             </span>
-
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] mb-6">
-                Find Your Perfect <br class="hidden sm:inline">
-                <span class="bg-gradient-to-r from-[#630ed4] via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    Smartphone Today
-                </span>
-            </h1>
-
-            <p class="text-lg md:text-xl font-medium text-purple-900/80 mb-3">
-                Smart choices begin with the right information.
-            </p>
-
-            <p class="max-w-2xl text-base md:text-lg text-slate-600 mb-10 leading-relaxed">
-                Explore the latest smartphones categorized by budget, flagship performance, camera excellence, and long-lasting battery life. Mobile World delivers verified, well-organized device insights.
-            </p>
-
-            <div class="flex flex-wrap items-center justify-center gap-4">
-                <a href="category.html" class="inline-flex items-center gap-2 bg-[#630ed4] hover:bg-[#520bb4] text-white font-bold px-8 py-4 rounded-full shadow-lg shadow-purple-300/50 hover:shadow-xl hover:-translate-y-0.5 transition-all text-base">
-                    <span>Explore Phones</span>
-                    <span class="material-symbols-outlined text-xl">arrow_forward</span>
-                </a>
-                <a href="best-specs.html" class="inline-flex items-center gap-2 bg-white hover:bg-purple-50 text-slate-700 hover:text-purple-700 font-semibold px-7 py-4 rounded-full border border-purple-200 shadow-sm hover:shadow transition-all text-base">
-                    <span>Best Specs</span>
-                    <span class="material-symbols-outlined text-xl">tune</span>
-                </a>
-            </div>
         </div>
-    </section>
 
-    <!-- FEATURED BRANDS SECTION (Sleek Infinite Ticker) -->
-    <section class="border-y border-purple-100 bg-white/70 py-10 backdrop-blur-xs overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 mb-6 text-center">
-            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-400">
-                Explore Top Smartphone Brands
-            </h2>
-        </div>
-        
         <div class="relative w-full overflow-hidden">
-            <!-- Gradient edge fades -->
-            <div class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#faf8fd] to-transparent z-10 pointer-events-none"></div>
-            <div class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#faf8fd] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none"></div>
 
-            <div class="animate-marquee flex items-center gap-6 py-2">
+            <div class="animate-marquee flex items-center gap-4 py-1">
                 <!-- Group 1 -->
-                <div class="flex items-center gap-6 text-lg font-bold text-slate-700">
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Apple</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Samsung</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">OnePlus</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Google Pixel</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Xiaomi</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">vivo</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">OPPO</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">realme</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Nothing</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">iQOO</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Motorola</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">POCO</span>
+                <div class="flex items-center gap-4 text-sm font-bold text-slate-700">
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition"> Apple</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Samsung Galaxy</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">OnePlus</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Google Pixel</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Xiaomi × Leica</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">vivo × ZEISS</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">OPPO</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">realme</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Nothing (CMF)</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">iQOO</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Motorola</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">POCO</span>
                 </div>
-                <!-- Duplicate Group for seamless infinite loop -->
-                <div class="flex items-center gap-6 text-lg font-bold text-slate-700" aria-hidden="true">
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Apple</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Samsung</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">OnePlus</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Google Pixel</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Xiaomi</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">vivo</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">OPPO</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">realme</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Nothing</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">iQOO</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">Motorola</span>
-                    <span class="px-5 py-2.5 rounded-2xl bg-purple-50/80 border border-purple-100/80 shadow-xs hover:border-purple-300 hover:text-purple-700 transition cursor-default">POCO</span>
+                <!-- Duplicate Group for seamless infinite marquee -->
+                <div class="flex items-center gap-4 text-sm font-bold text-slate-700" aria-hidden="true">
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition"> Apple</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Samsung Galaxy</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">OnePlus</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Google Pixel</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Xiaomi × Leica</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">vivo × ZEISS</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">OPPO</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">realme</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Nothing (CMF)</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">iQOO</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">Motorola</span>
+                    <span class="px-5 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-purple-400 hover:text-[#630ed4] transition">POCO</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY CHOOSE MOBILE WORLD -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
-                Why Choose <span class="text-[#630ed4]">Mobile World</span>
+    <!-- CORE VALUE PILLARS -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1 text-xs font-extrabold text-[#630ed4] mb-3">
+                <span class="material-symbols-outlined text-sm">verified</span>
+                Why Tech Enthusiasts Trust Us
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                Designed for <span class="bg-gradient-to-r from-[#630ed4] to-pink-600 bg-clip-text text-transparent">Clarity & Zero Fluff</span>
             </h2>
-            <p class="mt-3 text-slate-600 max-w-xl mx-auto">
-                Engineered to simplify your smartphone research and comparison process.
+            <p class="mt-3 text-base sm:text-lg text-slate-600">
+                We remove marketing gimmicks and present raw, benchmarked specifications so you can make informed decisions.
             </p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Card 1 -->
-            <div class="group bg-white p-7 rounded-3xl border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 hover:-translate-y-1 transition-all duration-300">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-100 text-purple-700 mb-5 group-hover:bg-[#630ed4] group-hover:text-white transition-colors">
-                    <span class="material-symbols-outlined text-2xl">verified_user</span>
+            <div class="group bg-white p-8 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-100 text-[#630ed4] mb-6 group-hover:bg-[#630ed4] group-hover:text-white transition-colors duration-300 shadow-xs">
+                    <span class="material-symbols-outlined text-3xl">verified_user</span>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Trusted Info</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    We organize complex smartphone specifications into an easy-to-understand format.
+                <h3 class="text-xl font-bold text-slate-900 mb-2">100% Lab Verified</h3>
+                <p class="text-sm text-slate-600 leading-relaxed flex-1">
+                    Every clock speed, sensor dimension, charging curve, and display nit rating is verified directly against manufacturer white papers.
                 </p>
             </div>
 
             <!-- Card 2 -->
-            <div class="group bg-white p-7 rounded-3xl border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 hover:-translate-y-1 transition-all duration-300">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-pink-100 text-pink-600 mb-5 group-hover:bg-pink-600 group-hover:text-white transition-colors">
-                    <span class="material-symbols-outlined text-2xl">savings</span>
+            <div class="group bg-white p-8 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl hover:border-pink-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-pink-100 text-pink-600 mb-6 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300 shadow-xs">
+                    <span class="material-symbols-outlined text-3xl">savings</span>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Budget Friendly</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Easily discover top value-for-money smartphones across all budget segments.
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Budget Segments</h3>
+                <p class="text-sm text-slate-600 leading-relaxed flex-1">
+                    Carefully curated selections across 7 distinct price brackets, from ₹9,000 entry champions to ₹1,44,999 ultimate flagships.
                 </p>
             </div>
 
             <!-- Card 3 -->
-            <div class="group bg-white p-7 rounded-3xl border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 hover:-translate-y-1 transition-all duration-300">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-indigo-100 text-indigo-600 mb-5 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                    <span class="material-symbols-outlined text-2xl">explore</span>
+            <div class="group bg-white p-8 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl hover:border-sky-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-100 text-sky-600 mb-6 group-hover:bg-sky-600 group-hover:text-white transition-colors duration-300 shadow-xs">
+                    <span class="material-symbols-outlined text-3xl">compare_arrows</span>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Easy Navigation</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Quickly jump through categories, specs, and curated product collections.
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Side-by-Side Matrix</h3>
+                <p class="text-sm text-slate-600 leading-relaxed flex-1">
+                    Compare any two devices directly with interactive modal views covering CPU, GPU, camera sensors, and battery life.
                 </p>
             </div>
 
             <!-- Card 4 -->
-            <div class="group bg-white p-7 rounded-3xl border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 hover:-translate-y-1 transition-all duration-300">
-                <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-violet-600 mb-5 group-hover:bg-violet-600 group-hover:text-white transition-colors">
-                    <span class="material-symbols-outlined text-2xl">devices</span>
+            <div class="group bg-white p-8 rounded-3xl border border-slate-200 shadow-xs hover:shadow-xl hover:border-emerald-300 hover:-translate-y-1.5 transition-all duration-300 flex flex-col">
+                <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-100 text-emerald-600 mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300 shadow-xs">
+                    <span class="material-symbols-outlined text-3xl">devices</span>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 mb-2">Responsive Design</h3>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Seamlessly optimized experience for desktop, tablet, and mobile browsers.
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Multi-Angle Views</h3>
+                <p class="text-sm text-slate-600 leading-relaxed flex-1">
+                    Inspect phones from front, back, and edge profile angles before making your buying decision.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- STATISTICS SECTION -->
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 w-full">
-        <div class="bg-gradient-to-br from-purple-900 via-[#520bb4] to-[#630ed4] p-8 sm:p-12 rounded-3xl shadow-xl text-white">
-            <div class="text-center mb-10">
-                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Mobile World in Numbers</h2>
-                <p class="mt-2 text-purple-200 text-sm sm:text-base">Continuously updated phone guides and specifications</p>
+    <!-- LIVE HARDWARE INTELLIGENCE STRIP -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 w-full">
+        <div class="bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 p-8 sm:p-14 rounded-3xl shadow-2xl text-white relative overflow-hidden">
+            <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-purple-600/20 blur-[100px] rounded-full pointer-events-none"></div>
+
+            <div class="relative z-10 text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-black tracking-tight">Mobile World in Numbers</h2>
+                <p class="mt-3 text-purple-200/80 text-sm sm:text-base font-medium">Standardized benchmark index updated continuously</p>
             </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 text-center">
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/15 transition">
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">20+</p>
-                    <p class="text-xs sm:text-sm font-medium text-purple-200 mt-2">Smartphones</p>
+
+            <div class="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 text-center">
+                <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                    <p class="text-3xl sm:text-4xl font-black text-white">21</p>
+                    <p class="text-xs font-bold text-purple-300 uppercase tracking-wider mt-2">Smartphones</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/15 transition">
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">12</p>
-                    <p class="text-xs sm:text-sm font-medium text-purple-200 mt-2">Trusted Brands</p>
+                <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                    <p class="text-3xl sm:text-4xl font-black text-white">12</p>
+                    <p class="text-xs font-bold text-purple-300 uppercase tracking-wider mt-2">Trusted Brands</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/15 transition">
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">7</p>
-                    <p class="text-xs sm:text-sm font-medium text-purple-200 mt-2">Budget Tiers</p>
+                <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                    <p class="text-3xl sm:text-4xl font-black text-white">7</p>
+                    <p class="text-xs font-bold text-purple-300 uppercase tracking-wider mt-2">Budget Segments</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/15 transition">
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">100%</p>
-                    <p class="text-xs sm:text-sm font-medium text-purple-200 mt-2">Responsive</p>
+                <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                    <p class="text-3xl sm:text-4xl font-black text-white">100%</p>
+                    <p class="text-xs font-bold text-purple-300 uppercase tracking-wider mt-2">Responsive UI</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/15 transition">
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">1</p>
-                    <p class="text-xs sm:text-sm font-medium text-purple-200 mt-2">Front-End Portal</p>
+                <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                    <p class="text-3xl sm:text-4xl font-black text-white">40+</p>
+                    <p class="text-xs font-bold text-purple-300 uppercase tracking-wider mt-2">Specs / Device</p>
                 </div>
-                <div class="bg-white/10 backdrop-blur-md p-5 rounded-2xl border border-white/10 hover:bg-white/15 transition">
-                    <p class="text-3xl sm:text-4xl font-extrabold text-white">✓</p>
-                    <p class="text-xs sm:text-sm font-medium text-purple-200 mt-2">Educational</p>
+                <div class="bg-white/5 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                    <p class="text-3xl sm:text-4xl font-black text-white">✓</p>
+                    <p class="text-xs font-bold text-purple-300 uppercase tracking-wider mt-2">Zero Bias</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ SECTION -->
-    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20 w-full">
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
-            <p class="mt-2 text-slate-600 text-sm sm:text-base">Everything you need to know about our specs portal</p>
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-24 w-full">
+        <div class="text-center mb-12">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1 text-xs font-extrabold text-[#630ed4] mb-3">
+                <span class="material-symbols-outlined text-sm">help</span>
+                Knowledge Base
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">Everything you need to know about our specifications portal</p>
         </div>
 
         <div class="space-y-4">
             <!-- FAQ 1 -->
-            <details class="group bg-white rounded-2xl border border-purple-100 shadow-xs p-5 transition-all open:shadow-md open:border-purple-200">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-800 text-base md:text-lg list-none select-none">
-                    <span>How often are Mobile specs updated?</span>
-                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-7 w-7 rounded-full bg-purple-50 group-open:bg-purple-100">
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-xs p-5 transition-all open:shadow-lg open:border-purple-300">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-900 text-base sm:text-lg list-none select-none">
+                    <span>How often are smartphone specifications updated?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-8 w-8 rounded-full bg-purple-50 group-open:bg-purple-100">
                         <img src="assets/images/site/less-than.png" class="h-3.5 w-3.5 object-contain rotate-90" alt="toggle">
                     </span>
                 </summary>
-                <div class="mt-3.5 text-sm md:text-base text-slate-600 leading-relaxed border-t border-purple-50 pt-3.5">
-                    Our database is updated daily as new devices are announced and benchmarked. We source data directly from manufacturer white papers and verified testing labs.
+                <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    Our database is updated in real-time as global smartphone launch events happen and official white papers are published. We ensure benchmark ratings, sensor sizes, and price tiers reflect the current market.
                 </div>
             </details>
 
             <!-- FAQ 2 -->
-            <details class="group bg-white rounded-2xl border border-purple-100 shadow-xs p-5 transition-all open:shadow-md open:border-purple-200">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-800 text-base md:text-lg list-none select-none">
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-xs p-5 transition-all open:shadow-lg open:border-purple-300">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-900 text-base sm:text-lg list-none select-none">
                     <span>What does the "Mobile World Rating" mean?</span>
-                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-7 w-7 rounded-full bg-purple-50 group-open:bg-purple-100">
+                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-8 w-8 rounded-full bg-purple-50 group-open:bg-purple-100">
                         <img src="assets/images/site/less-than.png" class="h-3.5 w-3.5 object-contain rotate-90" alt="toggle">
                     </span>
                 </summary>
-                <div class="mt-3.5 text-sm md:text-base text-slate-600 leading-relaxed border-t border-purple-50 pt-3.5">
-                    It's an aggregate score based on processor performance, display quality, camera output, and battery life, weighted against the device's launch price to determine value.
+                <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    It is an aggregate, weighted evaluation combining CPU/GPU synthetic benchmarks, camera low-light sensor metrics, battery endurance hours, and display color accuracy against the device's retail price.
                 </div>
             </details>
 
             <!-- FAQ 3 -->
-            <details class="group bg-white rounded-2xl border border-purple-100 shadow-xs p-5 transition-all open:shadow-md open:border-purple-200">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-800 text-base md:text-lg list-none select-none">
-                    <span>Can I compare two Mobiles side-by-side?</span>
-                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-7 w-7 rounded-full bg-purple-50 group-open:bg-purple-100">
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-xs p-5 transition-all open:shadow-lg open:border-purple-300">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-900 text-base sm:text-lg list-none select-none">
+                    <span>Can I compare two phones side-by-side?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-8 w-8 rounded-full bg-purple-50 group-open:bg-purple-100">
                         <img src="assets/images/site/less-than.png" class="h-3.5 w-3.5 object-contain rotate-90" alt="toggle">
                     </span>
                 </summary>
-                <div class="mt-3.5 text-sm md:text-base text-slate-600 leading-relaxed border-t border-purple-50 pt-3.5">
-                    Yes! Simply use the 'View Details' button on any phone card and look for the 'Compare' option on the device specification page.
+                <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    Yes! You can explore individual product spec pages and click the "Compare" button on any phone card, or jump to our <a href="best-specs.html" class="text-[#630ed4] font-bold underline">Best Specs</a> leaderboards to see top performers compared side-by-side.
                 </div>
             </details>
 
             <!-- FAQ 4 -->
-            <details class="group bg-white rounded-2xl border border-purple-100 shadow-xs p-5 transition-all open:shadow-md open:border-purple-200">
-                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-800 text-base md:text-lg list-none select-none">
-                    <span>Do you sell the Mobile directly?</span>
-                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-7 w-7 rounded-full bg-purple-50 group-open:bg-purple-100">
+            <details class="group bg-white rounded-2xl border border-slate-200 shadow-xs p-5 transition-all open:shadow-lg open:border-purple-300">
+                <summary class="flex justify-between items-center cursor-pointer font-bold text-slate-900 text-base sm:text-lg list-none select-none">
+                    <span>Do you sell mobile phones directly?</span>
+                    <span class="transition-transform duration-300 group-open:rotate-180 flex items-center justify-center h-8 w-8 rounded-full bg-purple-50 group-open:bg-purple-100">
                         <img src="assets/images/site/less-than.png" class="h-3.5 w-3.5 object-contain rotate-90" alt="toggle">
                     </span>
                 </summary>
-                <div class="mt-3.5 text-sm md:text-base text-slate-600 leading-relaxed border-t border-purple-50 pt-3.5">
-                    No, Mobile World is an information portal. We provide links to trusted retailers, but we do not sell hardware directly to ensure our reviews remain unbiased.
+                <div class="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed border-t border-slate-100 pt-4">
+                    No, Mobile World is an independent informational and research portal. We do not sell hardware directly to ensure 100% unbiased reviews and recommendations.
                 </div>
             </details>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="mt-auto bg-slate-900 text-slate-400 border-t border-slate-800">
-        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+    <footer class="mt-auto bg-slate-950 text-slate-400 border-t border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
                 <!-- Brand Info -->
-                <div>
-                    <div class="flex items-center gap-2 text-xl font-bold text-white mb-4">
-                        <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-purple-600 text-white">
-                            <span class="material-symbols-outlined text-sm">smartphone</span>
-                        </span>
-                        Mobile World
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2.5 text-xl font-black text-white">
+                        <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-[#630ed4] text-white shadow-md">
+                            <span class="material-symbols-outlined text-base">devices_other</span>
+                        </div>
+                        <span>Mobile<span class="text-purple-400">World</span></span>
                     </div>
                     <p class="text-sm leading-relaxed text-slate-400">
-                        Empowering your tech choices with data-driven smartphone insights, accurate specs, and unbiased comparisons.
+                        Empowering smart tech choices with data-driven smartphone insights, lab-verified specs, and unbiased category rankings.
                     </p>
-                    <div class="mt-4 flex gap-2">
-                        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 text-purple-400 hover:bg-purple-600 hover:text-white transition cursor-pointer">🐦</span>
-                        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 text-purple-400 hover:bg-purple-600 hover:text-white transition cursor-pointer">📸</span>
+                    <div class="flex items-center gap-2 pt-2">
+                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 border border-slate-800 text-purple-400 hover:bg-[#630ed4] hover:text-white transition cursor-pointer">🐦</span>
+                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 border border-slate-800 text-purple-400 hover:bg-[#630ed4] hover:text-white transition cursor-pointer">📸</span>
+                        <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-slate-900 border border-slate-800 text-purple-400 hover:bg-[#630ed4] hover:text-white transition cursor-pointer">💼</span>
                     </div>
                 </div>
 
                 <!-- Resources -->
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Resources</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Resources</h4>
                     <ul class="space-y-2.5 text-sm">
                         <li><a href="#" class="hover:text-purple-400 transition">Privacy Policy</a></li>
                         <li><a href="#" class="hover:text-purple-400 transition">Terms of Service</a></li>
                         <li><a href="#" class="hover:text-purple-400 transition">Cookie Policy</a></li>
-                        <li><a href="#" class="hover:text-purple-400 transition">Support</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Benchmarking Methodology</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Editorial Independence</a></li>
                     </ul>
                 </div>
 
-                <!-- Quick Links -->
+                <!-- Quick Navigation -->
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2.5 text-sm">
                         <li><a href="index.html" class="text-purple-400 font-semibold hover:text-purple-300 transition">Home</a></li>
-                        <li><a href="category.html" class="hover:text-purple-400 transition">Categories</a></li>
-                        <li><a href="best-specs.html" class="hover:text-purple-400 transition">Best Specs</a></li>
-                        <li><a href="accessories.html" class="hover:text-purple-400 transition">Accessories</a></li>
-                        <li><a href="about.html" class="hover:text-purple-400 transition">About Us</a></li>
-                        <li><a href="contact.html" class="hover:text-purple-400 transition">Contact</a></li>
+                        <li><a href="category.html" class="hover:text-purple-400 transition">Categories (7 Tiers)</a></li>
+                        <li><a href="best-specs.html" class="hover:text-purple-400 transition">Best Specs Leaderboard</a></li>
+                        <li><a href="accessories.html" class="hover:text-purple-400 transition">Accessories Hub</a></li>
+                        <li><a href="about.html" class="hover:text-purple-400 transition">About Our Lab</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-400 transition">Contact Team</a></li>
                     </ul>
                 </div>
 
-                <!-- Contact -->
+                <!-- Direct Contact -->
                 <div>
-                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Contact</h4>
-                    <ul class="space-y-2.5 text-sm">
-                        <li class="flex items-center gap-2"><span>📍</span> Chennai, Tamil Nadu, India</li>
-                        <li class="flex items-center gap-2"><span>✉️</span> contact@mobileworld.com</li>
-                        <li class="flex items-center gap-2"><span>📞</span> +91 98765 43201</li>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Direct Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2.5">
+                            <span class="material-symbols-outlined text-purple-400 text-lg shrink-0">location_on</span>
+                            <span>Chennai, Tamil Nadu, India</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="material-symbols-outlined text-purple-400 text-lg shrink-0">mail</span>
+                            <span>contact@mobileworld.com</span>
+                        </li>
+                        <li class="flex items-center gap-2.5">
+                            <span class="material-symbols-outlined text-purple-400 text-lg shrink-0">call</span>
+                            <span>+91 98765 43201</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <p>© 2025 Mobile World. All rights reserved.</p>
-                <p>Designed for tech enthusiasts & smartphone buyers.</p>
+            <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2025 Mobile World Inc. All specifications and brand trademarks belong to their respective owners.</p>
+                <p class="text-purple-400 font-semibold">Crafted for tech enthusiasts & smartphone buyers.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function switchHeroAngle(imgSrc) {
+            const mainImg = document.getElementById('heroPhoneMainImg');
+            mainImg.style.opacity = '0';
+            setTimeout(() => {
+                mainImg.src = imgSrc;
+                mainImg.style.opacity = '1';
+            }, 150);
+        }
+    </script>
 </body>
 </html>
