@@ -1,164 +1,502 @@
-<html>
-	<head>
-		<title>Best Specs - Mobile World</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<header class="sticky top-0 z-50 bg-[#fef7ff]/95 backdrop-blur-md border-b border-[#eadff1] shadow-sm">
-		<div class="mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-			<a class="font-[Plus_Jakarta_Sans] text-[24px] font-bold text-[#630ed4] tracking-normal" href="index.html">Mobile World</a>
-			<nav class="hidden md:flex items-center gap-8">
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="index.html">Home</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="category.html">Categories</a>
-				<a class="text-[14px] font-semibold text-[#630ed4] border-b-2 border-[#630ed4] pb-1 transition-colors" href="best-specs.html">Best Specs</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="accessories.html">accessories</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="about.html">About Us</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="contact.html">Contact</a>
-			</nav>
-			<a class="hidden md:inline-flex items-center justify-center rounded-full bg-[#630ed4] px-5 py-2 text-[14px] font-bold text-white shadow-sm transition-all hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
-			<details class="relative md:hidden">
-				<summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md text-[#4a4455] hover:bg-[#f3ebfa]">
-					<span class="material-symbols-outlined">menu</span>
-				</summary>
-				<div class="absolute right-0 mt-3 w-56 rounded-lg border border-[#eadff1] bg-white p-2 shadow-lg">
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="index.html">Home</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="category.html">Categories</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#630ed4] bg-[#f3ebfa]" href="best-specs.html">Best Specs</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="accessories.html">accessories</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="about.html">About Us</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="contact.html">Contact</a>
-					<a class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#630ed4] px-4 py-2 text-[14px] font-bold text-white hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
-				</div>
-			</details>
-		</div>
-	</header>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Specs & Benchmark Leaderboard | Mobile World</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .phone-canvas {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen antialiased selection:bg-[#630ed4] selection:text-white">
 
-		<section class="max-w-6xl mx-auto px-6 py-16 text-center">
-			<h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Best Specs Right Now</h1>
-			<p class="max-w-2xl mx-auto text-gray-600 mb-12">A quick look at how top phones stack up on the specs that matter most — processor, display, camera, and battery.</p>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-				<div class="bg-white rounded-2xl border border-gray-200 shadow-md p-6 hover:shadow-lg transition">
-					<div class="flex items-center justify-between mb-4">
-						<h3 class="text-xl font-bold text-purple-800">Flagship Pick</h3>
-						<span class="text-sm font-bold text-white bg-pink-600 px-3 py-1 rounded-full">9.4/10</span>
-					</div>
-					<ul class="space-y-2 text-sm text-gray-700">
-						<li><span class="font-semibold text-purple-700">Processor:</span> Latest-gen top-tier chipset</li>
-						<li><span class="font-semibold text-purple-700">Display:</span> 6.7" 120Hz AMOLED</li>
-						<li><span class="font-semibold text-purple-700">Camera:</span> Triple lens, 50MP main</li>
-						<li><span class="font-semibold text-purple-700">Battery:</span> 5000mAh, fast charging</li>
-					</ul>
-				</div>
-				<div class="bg-white rounded-2xl border border-gray-200 shadow-md p-6 hover:shadow-lg transition">
-					<div class="flex items-center justify-between mb-4">
-						<h3 class="text-xl font-bold text-purple-800">Best Value</h3>
-						<span class="text-sm font-bold text-white bg-pink-600 px-3 py-1 rounded-full">9.0/10</span>
-					</div>
-					<ul class="space-y-2 text-sm text-gray-700">
-						<li><span class="font-semibold text-purple-700">Processor:</span> Upper-mid-range chipset</li>
-						<li><span class="font-semibold text-purple-700">Display:</span> 6.5" 120Hz AMOLED</li>
-						<li><span class="font-semibold text-purple-700">Camera:</span> Dual lens, 64MP main</li>
-						<li><span class="font-semibold text-purple-700">Battery:</span> 5000mAh, fast charging</li>
-					</ul>
-				</div>
-				<div class="bg-white rounded-2xl border border-gray-200 shadow-md p-6 hover:shadow-lg transition">
-					<div class="flex items-center justify-between mb-4">
-						<h3 class="text-xl font-bold text-purple-800">Battery Champion</h3>
-						<span class="text-sm font-bold text-white bg-pink-600 px-3 py-1 rounded-full">8.8/10</span>
-					</div>
-					<ul class="space-y-2 text-sm text-gray-700">
-						<li><span class="font-semibold text-purple-700">Processor:</span> Efficient mid-range chipset</li>
-						<li><span class="font-semibold text-purple-700">Display:</span> 6.6" 90Hz LCD</li>
-						<li><span class="font-semibold text-purple-700">Camera:</span> Dual lens, 50MP main</li>
-						<li><span class="font-semibold text-purple-700">Battery:</span> 6000mAh, fast charging</li>
-					</ul>
-				</div>
-				<div class="bg-white rounded-2xl border border-gray-200 shadow-md p-6 hover:shadow-lg transition">
-					<div class="flex items-center justify-between mb-4">
-						<h3 class="text-xl font-bold text-purple-800">Compact Powerhouse</h3>
-						<span class="text-sm font-bold text-white bg-pink-600 px-3 py-1 rounded-full">9.1/10</span>
-					</div>
-					<ul class="space-y-2 text-sm text-gray-700">
-						<li><span class="font-semibold text-purple-700">Processor:</span> Flagship-tier chipset</li>
-						<li><span class="font-semibold text-purple-700">Display:</span> 6.1" 120Hz AMOLED</li>
-						<li><span class="font-semibold text-purple-700">Camera:</span> Dual lens, 48MP main</li>
-						<li><span class="font-semibold text-purple-700">Battery:</span> 4300mAh, fast charging</li>
-					</ul>
-				</div>
-				<div class="bg-white rounded-2xl border border-gray-200 shadow-md p-6 hover:shadow-lg transition">
-					<div class="flex items-center justify-between mb-4">
-						<h3 class="text-xl font-bold text-purple-800">Camera Specialist</h3>
-						<span class="text-sm font-bold text-white bg-pink-600 px-3 py-1 rounded-full">9.2/10</span>
-					</div>
-					<ul class="space-y-2 text-sm text-gray-700">
-						<li><span class="font-semibold text-purple-700">Processor:</span> Upper-mid-range chipset</li>
-						<li><span class="font-semibold text-purple-700">Display:</span> 6.7" 120Hz AMOLED</li>
-						<li><span class="font-semibold text-purple-700">Camera:</span> Triple lens, 108MP main</li>
-						<li><span class="font-semibold text-purple-700">Battery:</span> 5000mAh, fast charging</li>
-					</ul>
-				</div>
-				<div class="bg-white rounded-2xl border border-gray-200 shadow-md p-6 hover:shadow-lg transition">
-					<div class="flex items-center justify-between mb-4">
-						<h3 class="text-xl font-bold text-purple-800">Budget Reliable</h3>
-						<span class="text-sm font-bold text-white bg-pink-600 px-3 py-1 rounded-full">8.3/10</span>
-					</div>
-					<ul class="space-y-2 text-sm text-gray-700">
-						<li><span class="font-semibold text-purple-700">Processor:</span> Entry-level chipset</li>
-						<li><span class="font-semibold text-purple-700">Display:</span> 6.5" 90Hz LCD</li>
-						<li><span class="font-semibold text-purple-700">Camera:</span> Dual lens, 50MP main</li>
-						<li><span class="font-semibold text-purple-700">Battery:</span> 5000mAh, standard charging</li>
-					</ul>
-				</div>
-			</div>
-			<p class="text-sm text-gray-500 mt-10">Ratings are based on our aggregate Mobile World Rating — see our FAQ on the homepage for how it's calculated.</p>
-		</section>
+    <!-- FLOATING TOP NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+        <div class="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <a class="flex items-center gap-3 group" href="index.html">
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#630ed4] to-[#a855f7] text-white shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-all">
+                    <span class="material-symbols-outlined text-2xl">devices_other</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">
+                        Mobile<span class="text-[#630ed4]">World</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold tracking-widest uppercase text-slate-400 mt-1">Hardware Intelligence</span>
+                </div>
+            </a>
 
-		<footer class="bg-purple-100 border-t border-gray-200 mt-12">
-		<div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-			<div class="grid gap-8 md:grid-cols-4">
-				<div>
-					<h3 class="text-2xl font-bold text-purple-700">Mobile World</h3>
-					<p class="mt-3 max-w-sm text-sm text-gray-600">Empowering your tech choices with data-driven smartphone insights and comparisons.</p>
-					<div class="mt-4 flex gap-3">
-					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">🐦</p>
-					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">📸</p>
-					</div>
-				</div>
+            <nav class="hidden lg:flex items-center gap-1.5 bg-slate-100/90 p-1.5 rounded-full border border-slate-200/80 shadow-inner">
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="index.html">Home</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="category.html">Categories</a>
+                <a class="px-5 py-2 text-sm font-bold text-white bg-[#630ed4] rounded-full shadow-md shadow-purple-600/25" href="best-specs.html">Best Specs</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="accessories.html">Accessories</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="about.html">About Us</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="contact.html">Contact</a>
+            </nav>
 
-				<div>
-					<h4 class="text-lg font-semibold text-purple-800">Resources</h4>
-					<ul class="mt-4 space-y-2 text-sm">
-					  <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Cookie Policy</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Support</a></li>
-					</ul>
-				</div>
+            <div class="hidden md:flex items-center gap-3">
+                <a class="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-slate-900/10 transition-all hover:bg-[#630ed4] hover:shadow-lg hover:-translate-y-0.5" href="sign-in.html">
+                    Sign In
+                </a>
+            </div>
 
-				<div>
-					<h4 class="text-lg font-semibold text-purple-800">Quick Links</h4>
-					<ul class="mt-4 space-y-2 text-sm ">
-					  <li><a href="index.html" class="hover:text-purple-600">Home</a></li>
-					  <li><a href="category.html" class="hover:text-purple-600">Categories</a></li>
-					  <li><a href="best-specs.html" class="hover:text-purple-600">Best Specs</a></li>
-					  <li><a href="accessories.html" class="hover:text-purple-600">Accessories</a></li>
-					  <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
-					  <li><a href="contact.html" class="hover:text-purple-600">Contact</a></li>
-					</ul>
-				</div>
+            <details class="relative lg:hidden group">
+                <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 hover:bg-purple-50 focus:outline-none transition shadow-xs">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </summary>
+                <div class="absolute right-0 mt-3 w-72 origin-top-right rounded-3xl border border-slate-200 bg-white/95 p-4 shadow-2xl backdrop-blur-2xl space-y-1">
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="index.html">
+                        <span class="material-symbols-outlined text-xl">home</span> Home
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="category.html">
+                        <span class="material-symbols-outlined text-xl">grid_view</span> Categories
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold text-[#630ed4] bg-purple-50" href="best-specs.html">
+                        <span class="material-symbols-outlined text-xl">bolt</span> Best Specs
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="accessories.html">
+                        <span class="material-symbols-outlined text-xl">headphones</span> Accessories
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="about.html">
+                        <span class="material-symbols-outlined text-xl">info</span> About Us
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="contact.html">
+                        <span class="material-symbols-outlined text-xl">mail</span> Contact
+                    </a>
+                </div>
+            </details>
+        </div>
+    </header>
 
-				<div>
-					<h3 class="font-bold text-xl text-purple-600 mb-4">Contact</h3>
-					<p class="mb-2">📍 Chennai, Tamil Nadu, India</p>
-					<p class="mb-2">✉️ contact@mobileworld.com</p>
-					<p class="mb-2">📞 +91 98765 43201</p>
-				</div>
-			</div>
-			<div class="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-blue-500">© 2024 Mobile World. All rights reserved.</div>
-		</div>
+    <!-- HEADER / PILLS HERO -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 w-full">
+        <div class="max-w-3xl">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1 text-xs font-extrabold text-[#630ed4] mb-3">
+                <span class="material-symbols-outlined text-sm">trophy</span>
+                Hardware Champions 2025
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                Top Specs & <span class="bg-gradient-to-r from-[#630ed4] to-pink-600 bg-clip-text text-transparent">Benchmark Leaders</span>
+            </h1>
+            <p class="mt-3 text-slate-600 text-base sm:text-lg font-medium">
+                Discover the best performing processors, industry-leading camera setups, and marathon battery champions ranked by verified hardware metrics.
+            </p>
+        </div>
+
+        <!-- SPEC CATEGORY NAV PILLS -->
+        <div class="mt-8 flex items-center gap-3 overflow-x-auto pb-2 no-scrollbar">
+            <a href="#performance" class="flex items-center gap-2 whitespace-nowrap px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-[#630ed4] text-white shadow-md shadow-purple-600/25">
+                <span class="material-symbols-outlined text-base">speed</span>
+                <span>Best Performance & Gaming</span>
+            </a>
+            <a href="#camera" class="flex items-center gap-2 whitespace-nowrap px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-200 hover:border-purple-300 text-slate-700 hover:text-[#630ed4] shadow-2xs transition">
+                <span class="material-symbols-outlined text-base">photo_camera</span>
+                <span>Best Camera & Video</span>
+            </a>
+            <a href="#battery" class="flex items-center gap-2 whitespace-nowrap px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-200 hover:border-purple-300 text-slate-700 hover:text-[#630ed4] shadow-2xs transition">
+                <span class="material-symbols-outlined text-base">battery_charging_full</span>
+                <span>Best Battery Endurance</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- MAIN SPEC LEADERS -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-20 w-full">
+
+        <!-- 1. BEST PERFORMANCE SECTION -->
+        <section id="performance" class="scroll-mt-24">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-8">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-100 text-[#630ed4]">
+                            <span class="material-symbols-outlined text-xl">bolt</span>
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Best Performance & Gaming</h2>
+                    </div>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1 font-medium">Powered by 3nm & 4nm Flagship Processors with 120Hz/144Hz high frame-rate stability.</p>
+                </div>
+                <span class="hidden sm:inline-flex px-3.5 py-1.5 rounded-full bg-purple-50 text-[#630ed4] text-xs font-bold border border-purple-100">Top 3 Flagships</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Galaxy S25 Ultra -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-black flex items-center gap-1">
+                            <span>👑 #1 Antutu King</span>
+                        </span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;1,17,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/samsung-galaxy-s25-ultra/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="Galaxy S25 Ultra">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">Samsung Galaxy S25 Ultra</h3>
+                    <p class="text-xs font-bold text-[#630ed4] mt-0.5">Snapdragon 8 Elite (3nm)</p>
+
+                    <div class="mt-4 p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
+                        <div class="flex justify-between text-xs font-bold mb-1.5">
+                            <span class="text-slate-500 font-medium">Antutu 10 Benchmark</span>
+                            <span class="text-[#630ed4] font-black">3,050,000+</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-[#630ed4] to-pink-500 h-full w-[98%] rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 space-y-1.5 text-xs text-slate-600 flex-1">
+                        <div class="flex items-center gap-2">✓ <strong>Ray Tracing:</strong> Hardware-accelerated 120 FPS</div>
+                        <div class="flex items-center gap-2">✓ <strong>Vapor Chamber:</strong> 1.9x Larger Liquid Cooling</div>
+                        <div class="flex items-center gap-2">✓ <strong>RAM:</strong> 12GB / 16GB LPDDR5X</div>
+                    </div>
+
+                    <a href="products/samsung-galaxy-s25-ultra.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-[#630ed4] hover:bg-[#520bb4] text-white font-bold text-xs rounded-xl transition shadow-md shadow-purple-600/20 cursor-pointer">
+                            View Full Spec Sheet →
+                        </button>
+                    </a>
+                </div>
+
+                <!-- 2. iPhone 16 Pro Max -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-slate-100 text-slate-800 text-xs font-black flex items-center gap-1">
+                            <span>🚀 #2 Single-Core King</span>
+                        </span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;1,44,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/apple-iphone-16-pro-max/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="iPhone 16 Pro Max">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">Apple iPhone 16 Pro Max</h3>
+                    <p class="text-xs font-bold text-[#630ed4] mt-0.5">Apple A18 Pro (2nd Gen 3nm)</p>
+
+                    <div class="mt-4 p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
+                        <div class="flex justify-between text-xs font-bold mb-1.5">
+                            <span class="text-slate-500 font-medium">Geekbench Multi-Core</span>
+                            <span class="text-[#630ed4] font-black">8,600+</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-[#630ed4] to-indigo-500 h-full w-[96%] rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 space-y-1.5 text-xs text-slate-600 flex-1">
+                        <div class="flex items-center gap-2">✓ <strong>AAA Gaming:</strong> Native Resident Evil & Death Stranding</div>
+                        <div class="flex items-center gap-2">✓ <strong>GPU:</strong> 6-Core Pro GPU with Mesh Shading</div>
+                        <div class="flex items-center gap-2">✓ <strong>NPU:</strong> 16-Core Neural Engine (35 TOPS)</div>
+                    </div>
+
+                    <a href="products/apple-iphone-16-pro-max.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-[#630ed4] hover:bg-[#520bb4] text-white font-bold text-xs rounded-xl transition shadow-md shadow-purple-600/20 cursor-pointer">
+                            View Full Spec Sheet →
+                        </button>
+                    </a>
+                </div>
+
+                <!-- 3. Xiaomi 15 Ultra -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-purple-100 text-[#630ed4] text-xs font-black flex items-center gap-1">
+                            <span>⚡ Sustained Peak Frame</span>
+                        </span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;1,20,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/xiaomi-15-ultra/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="Xiaomi 15 Ultra">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">Xiaomi 15 Ultra</h3>
+                    <p class="text-xs font-bold text-[#630ed4] mt-0.5">Snapdragon 8 Elite + Dual Loop Cooling</p>
+
+                    <div class="mt-4 p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
+                        <div class="flex justify-between text-xs font-bold mb-1.5">
+                            <span class="text-slate-500 font-medium">Antutu 10 Benchmark</span>
+                            <span class="text-[#630ed4] font-black">3,010,000+</span>
+                        </div>
+                        <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-[#630ed4] to-sky-500 h-full w-[97%] rounded-full"></div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 space-y-1.5 text-xs text-slate-600 flex-1">
+                        <div class="flex items-center gap-2">✓ <strong>Cooling:</strong> Wing-shaped Loop Cooling System</div>
+                        <div class="flex items-center gap-2">✓ <strong>Display:</strong> 120Hz 2K C8 OLED Panel</div>
+                        <div class="flex items-center gap-2">✓ <strong>Charge:</strong> 90W HyperCharge + 80W Wireless</div>
+                    </div>
+
+                    <a href="products/xiaomi-15-ultra.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-[#630ed4] hover:bg-[#520bb4] text-white font-bold text-xs rounded-xl transition shadow-md shadow-purple-600/20 cursor-pointer">
+                            View Full Spec Sheet →
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. BEST CAMERA SECTION -->
+        <section id="camera" class="scroll-mt-24">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-8">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-pink-100 text-pink-700">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Best Camera & Videography</h2>
+                    </div>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1 font-medium">Ranked by large 1-inch & 200MP sensors, optical telephoto zoom, and studio video modes.</p>
+                </div>
+                <span class="hidden sm:inline-flex px-3.5 py-1.5 rounded-full bg-pink-50 text-pink-700 text-xs font-bold border border-pink-100">Studio Grade</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. Galaxy S25 Ultra -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-pink-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-xs font-black">200MP Quad Cam</span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;1,17,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/samsung-galaxy-s25-ultra/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="Galaxy S25 Ultra">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">Galaxy S25 Ultra</h3>
+                    <p class="text-xs text-slate-500 mt-1 font-medium">200MP (OIS) + 50MP Ultra-Wide + 50MP (5x Periscope) + 10MP (3x Tele)</p>
+
+                    <div class="mt-4 p-3.5 bg-pink-50/60 rounded-2xl border border-pink-100 space-y-1 text-xs font-semibold text-slate-700 flex-1">
+                        <p>🔭 <strong>100x Space Zoom:</strong> AI Clarity Processing</p>
+                        <p>🎥 <strong>8K 30FPS Video:</strong> Log & HDR10+ Support</p>
+                        <p>✨ <strong>Nightography:</strong> Quad Pixel 2.4μm Binning</p>
+                    </div>
+
+                    <a href="products/samsung-galaxy-s25-ultra.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-slate-900 hover:bg-[#630ed4] text-white font-bold text-xs rounded-xl transition cursor-pointer">
+                            Explore Camera Samples →
+                        </button>
+                    </a>
+                </div>
+
+                <!-- 2. vivo X200 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-pink-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-purple-100 text-[#630ed4] text-xs font-black">ZEISS APO Telephoto</span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;59,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/vivo-x200/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="vivo X200">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">vivo X200</h3>
+                    <p class="text-xs text-slate-500 mt-1 font-medium">50MP Sony LYT-818 + 50MP ZEISS Tele + 50MP Ultra-Wide</p>
+
+                    <div class="mt-4 p-3.5 bg-purple-50/60 rounded-2xl border border-purple-100 space-y-1 text-xs font-semibold text-slate-700 flex-1">
+                        <p>📷 <strong>ZEISS T* Coating:</strong> Eliminates Night Flares</p>
+                        <p>🎭 <strong>Portrait Styles:</strong> 24mm, 35mm, 50mm, 85mm, 100mm</p>
+                        <p>🎬 <strong>4K 120fps Cinematic:</strong> 10-bit Log Studio Mode</p>
+                    </div>
+
+                    <a href="products/vivo-x200.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-slate-900 hover:bg-[#630ed4] text-white font-bold text-xs rounded-xl transition cursor-pointer">
+                            Explore Camera Samples →
+                        </button>
+                    </a>
+                </div>
+
+                <!-- 3. iPhone 16 Pro Max -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-pink-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-black">4K 120fps ProRes</span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;1,44,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/apple-iphone-16-pro-max/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="iPhone 16 Pro Max">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">iPhone 16 Pro Max</h3>
+                    <p class="text-xs text-slate-500 mt-1 font-medium">48MP Fusion + 48MP Ultra-Wide + 12MP 5x Tetraprism Tele</p>
+
+                    <div class="mt-4 p-3.5 bg-indigo-50/60 rounded-2xl border border-indigo-100 space-y-1 text-xs font-semibold text-slate-700 flex-1">
+                        <p>📹 <strong>Audio Mix:</strong> Studio, In-Frame & Cinematic Mic</p>
+                        <p>🔘 <strong>Camera Control:</strong> Capacitive Two-Stage Button</p>
+                        <p>🎨 <strong>Photographic Styles:</strong> Real-time Color Grading</p>
+                    </div>
+
+                    <a href="products/apple-iphone-16-pro-max.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-slate-900 hover:bg-[#630ed4] text-white font-bold text-xs rounded-xl transition cursor-pointer">
+                            Explore Camera Samples →
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. BEST BATTERY MARATHON SECTION -->
+        <section id="battery" class="scroll-mt-24">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-200 mb-8">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                            <span class="material-symbols-outlined text-xl">battery_charging_full</span>
+                        </span>
+                        <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Best Battery Endurance</h2>
+                    </div>
+                    <p class="text-slate-500 text-xs sm:text-sm mt-1 font-medium">High-density Silicon-Carbon batteries offering 2+ days of screen-on-time.</p>
+                </div>
+                <span class="hidden sm:inline-flex px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold border border-emerald-100">2+ Day Longevity</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. vivo T4 5G -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black">👑 7300mAh Monster</span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;19,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/vivo-t4-5g/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="vivo T4 5G">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">vivo T4 5G</h3>
+                    <p class="text-xs font-bold text-emerald-600 mt-0.5">7300mAh High-Density Battery</p>
+
+                    <div class="mt-4 p-3.5 bg-emerald-50/60 rounded-2xl border border-emerald-100 space-y-1 text-xs font-semibold text-slate-700 flex-1">
+                        <p>⏱️ <strong>Screen-on Time:</strong> Up to 18 Hours</p>
+                        <p>⚡ <strong>Fast Charge:</strong> 44W FlashCharge</p>
+                        <p>🛡️ <strong>Health:</strong> 4-Year Battery Health Promise</p>
+                    </div>
+
+                    <a href="products/vivo-t4-5g.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-slate-900 hover:bg-[#630ed4] text-white font-bold text-xs rounded-xl transition cursor-pointer">
+                            View Full Spec Sheet →
+                        </button>
+                    </a>
+                </div>
+
+                <!-- 2. realme GT 7T -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black">⚡ 7000mAh Titan</span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;29,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/realme-gt-7t/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="realme GT 7T">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">realme GT 7T</h3>
+                    <p class="text-xs font-bold text-emerald-600 mt-0.5">7000mAh Titan Battery + 120W Charge</p>
+
+                    <div class="mt-4 p-3.5 bg-emerald-50/60 rounded-2xl border border-emerald-100 space-y-1 text-xs font-semibold text-slate-700 flex-1">
+                        <p>⏱️ <strong>Screen-on Time:</strong> 16.5 Hours</p>
+                        <p>⚡ <strong>0 to 50%:</strong> In just 14 Minutes</p>
+                        <p>❄️ <strong>Cold Resistance:</strong> Operates at -20°C</p>
+                    </div>
+
+                    <a href="products/realme-gt-7t.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-slate-900 hover:bg-[#630ed4] text-white font-bold text-xs rounded-xl transition cursor-pointer">
+                            View Full Spec Sheet →
+                        </button>
+                    </a>
+                </div>
+
+                <!-- 3. OnePlus Nord 5 -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-xs hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-black">❄️ 6800mAh Glacier</span>
+                        <span class="text-xl font-black text-emerald-600">&#8377;29,999</span>
+                    </div>
+                    <div class="rounded-2xl phone-canvas p-4 flex items-center justify-center mb-4">
+                        <img src="assets/images/phones/oneplus-nord-5/main.jpeg" class="h-52 object-contain drop-shadow-md" alt="OnePlus Nord 5">
+                    </div>
+                    <h3 class="text-xl font-black text-slate-900">OnePlus Nord 5</h3>
+                    <p class="text-xs font-bold text-emerald-600 mt-0.5">6800mAh Glacier Battery Technology</p>
+
+                    <div class="mt-4 p-3.5 bg-emerald-50/60 rounded-2xl border border-emerald-100 space-y-1 text-xs font-semibold text-slate-700 flex-1">
+                        <p>⏱️ <strong>Screen-on Time:</strong> 15.5 Hours</p>
+                        <p>⚡ <strong>SUPERVOOC:</strong> 80W Fast Charging</p>
+                        <p>🔋 <strong>Cell:</strong> Silicon-Anode Ultra-Thin</p>
+                    </div>
+
+                    <a href="products/oneplus-nord-5.html" class="mt-6 block w-full">
+                        <button class="w-full py-3.5 bg-slate-900 hover:bg-[#630ed4] text-white font-bold text-xs rounded-xl transition cursor-pointer">
+                            View Full Spec Sheet →
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-slate-950 text-slate-400 border-t border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-2.5 text-xl font-black text-white mb-4">
+                        <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-[#630ed4] text-white shadow-md">
+                            <span class="material-symbols-outlined text-base">devices_other</span>
+                        </div>
+                        <span>Mobile<span class="text-purple-400">World</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-slate-400">
+                        Empowering smart tech choices with data-driven smartphone insights, accurate specs, and unbiased rankings.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Resources</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="hover:text-purple-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Benchmark Testing</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="category.html" class="hover:text-purple-400 transition">Categories</a></li>
+                        <li><a href="best-specs.html" class="text-purple-400 font-semibold hover:text-purple-300 transition">Best Specs</a></li>
+                        <li><a href="accessories.html" class="hover:text-purple-400 transition">Accessories</a></li>
+                        <li><a href="about.html" class="hover:text-purple-400 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>📍 Chennai, Tamil Nadu, India</li>
+                        <li>✉️ contact@mobileworld.com</li>
+                        <li>📞 +91 98765 43201</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800/80 pt-8 text-center text-xs text-slate-500">
+                © 2025 Mobile World Inc. All rights reserved.
+            </div>
+        </div>
     </footer>
-	</body>
+
+</body>
 </html>
