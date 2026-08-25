@@ -1,121 +1,341 @@
-<html>
-	<head>
-		<title>Accessories - Mobile World</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<header class="sticky top-0 z-50 bg-[#fef7ff]/95 backdrop-blur-md border-b border-[#eadff1] shadow-sm">
-		<div class="mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-			<a class="font-[Plus_Jakarta_Sans] text-[24px] font-bold text-[#630ed4] tracking-normal" href="index.html">Mobile World</a>
-			<nav class="hidden md:flex items-center gap-8">
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="index.html">Home</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="category.html">Categories</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="best-specs.html">Best Specs</a>
-				<a class="text-[14px] font-semibold text-[#630ed4] border-b-2 border-[#630ed4] pb-1 transition-colors" href="accessories.html">accessories</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="about.html">About Us</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="contact.html">Contact</a>
-			</nav>
-			<a class="hidden md:inline-flex items-center justify-center rounded-full bg-[#630ed4] px-5 py-2 text-[14px] font-bold text-white shadow-sm transition-all hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
-			<details class="relative md:hidden">
-				<summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md text-[#4a4455] hover:bg-[#f3ebfa]">
-					<span class="material-symbols-outlined">menu</span>
-				</summary>
-				<div class="absolute right-0 mt-3 w-56 rounded-lg border border-[#eadff1] bg-white p-2 shadow-lg">
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="index.html">Home</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="category.html">Categories</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="best-specs.html">Best Specs</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#630ed4] bg-[#f3ebfa]" href="accessories.html">accessories</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="about.html">About Us</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="contact.html">Contact</a>
-					<a class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#630ed4] px-4 py-2 text-[14px] font-bold text-white hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
-				</div>
-			</details>
-		</div>
-	</header>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Accessories & Power Gear | Mobile World</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .accessory-canvas {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen antialiased selection:bg-[#630ed4] selection:text-white">
 
-		<section class="max-w-6xl mx-auto px-6 py-16 text-center">
-			<h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Accessories</h1>
-			<p class="max-w-2xl mx-auto text-gray-600 mb-12">Round out your setup with the essentials — cases, chargers, earbuds, and more.</p>
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition text-center">
-					<h3 class="text-lg font-bold text-purple-800 mb-2">Phone Cases</h3>
-					<p class="text-sm text-gray-600 mb-4">Protective cases in silicone, leather, and rugged styles for every device.</p>
-					<p class="text-sm font-semibold text-pink-600">From ₹299</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition text-center">
-					<h3 class="text-lg font-bold text-purple-800 mb-2">Screen Protectors</h3>
-					<p class="text-sm text-gray-600 mb-4">Tempered glass and film protectors to keep your display scratch-free.</p>
-					<p class="text-sm font-semibold text-pink-600">From ₹199</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition text-center">
-					<h3 class="text-lg font-bold text-purple-800 mb-2">Chargers & Cables</h3>
-					<p class="text-sm text-gray-600 mb-4">Fast chargers, wireless pads, and durable cables for daily charging.</p>
-					<p class="text-sm font-semibold text-pink-600">From ₹399</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition text-center">
-					<h3 class="text-lg font-bold text-purple-800 mb-2">Wireless Earbuds</h3>
-					<p class="text-sm text-gray-600 mb-4">Compact earbuds with noise isolation and long battery life.</p>
-					<p class="text-sm font-semibold text-pink-600">From ₹1,499</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition text-center">
-					<h3 class="text-lg font-bold text-purple-800 mb-2">Power Banks</h3>
-					<p class="text-sm text-gray-600 mb-4">Portable battery packs to keep your phone charged on the go.</p>
-					<p class="text-sm font-semibold text-pink-600">From ₹899</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition text-center">
-					<h3 class="text-lg font-bold text-purple-800 mb-2">Car Mounts</h3>
-					<p class="text-sm text-gray-600 mb-4">Secure mounts for hands-free navigation and calls while driving.</p>
-					<p class="text-sm font-semibold text-pink-600">From ₹499</p>
-				</div>
-			</div>
-		</section>
+    <!-- FLOATING TOP NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-nav transition-all duration-300">
+        <div class="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <a class="flex items-center gap-3 group" href="index.html">
+                <div class="flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-tr from-[#630ed4] to-[#a855f7] text-white shadow-lg shadow-purple-600/30 group-hover:scale-105 transition-all">
+                    <span class="material-symbols-outlined text-2xl">devices_other</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">
+                        Mobile<span class="text-[#630ed4]">World</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold tracking-widest uppercase text-slate-400 mt-1">Hardware Intelligence</span>
+                </div>
+            </a>
 
-		<footer class="bg-purple-100 border-t border-gray-200 mt-12">
-		<div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-			<div class="grid gap-8 md:grid-cols-4">
-				<div>
-					<h3 class="text-2xl font-bold text-purple-700">Mobile World</h3>
-					<p class="mt-3 max-w-sm text-sm text-gray-600">Empowering your tech choices with data-driven smartphone insights and comparisons.</p>
-					<div class="mt-4 flex gap-3">
-					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">🐦</p>
-					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">📸</p>
-					</div>
-				</div>
+            <nav class="hidden lg:flex items-center gap-1.5 bg-slate-100/90 p-1.5 rounded-full border border-slate-200/80 shadow-inner">
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="index.html">Home</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="category.html">Categories</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="best-specs.html">Best Specs</a>
+                <a class="px-5 py-2 text-sm font-bold text-white bg-[#630ed4] rounded-full shadow-md shadow-purple-600/25" href="accessories.html">Accessories</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="about.html">About Us</a>
+                <a class="px-5 py-2 text-sm font-semibold text-slate-600 hover:text-[#630ed4] hover:bg-white/80 rounded-full transition-all" href="contact.html">Contact</a>
+            </nav>
 
-				<div>
-					<h4 class="text-lg font-semibold text-purple-800">Resources</h4>
-					<ul class="mt-4 space-y-2 text-sm">
-					  <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Cookie Policy</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Support</a></li>
-					</ul>
-				</div>
+            <div class="hidden md:flex items-center gap-3">
+                <a class="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-slate-900/10 transition-all hover:bg-[#630ed4] hover:shadow-lg hover:-translate-y-0.5" href="sign-in.html">
+                    Sign In
+                </a>
+            </div>
 
-				<div>
-					<h4 class="text-lg font-semibold text-purple-800">Quick Links</h4>
-					<ul class="mt-4 space-y-2 text-sm ">
-					  <li><a href="index.html" class="hover:text-purple-600">Home</a></li>
-					  <li><a href="category.html" class="hover:text-purple-600">Categories</a></li>
-					  <li><a href="best-specs.html" class="hover:text-purple-600">Best Specs</a></li>
-					  <li><a href="accessories.html" class="hover:text-purple-600">Accessories</a></li>
-					  <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
-					  <li><a href="contact.html" class="hover:text-purple-600">Contact</a></li>
-					</ul>
-				</div>
+            <details class="relative lg:hidden group">
+                <summary class="flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 hover:bg-purple-50 focus:outline-none transition shadow-xs">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </summary>
+                <div class="absolute right-0 mt-3 w-72 origin-top-right rounded-3xl border border-slate-200 bg-white/95 p-4 shadow-2xl backdrop-blur-2xl space-y-1">
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="index.html">
+                        <span class="material-symbols-outlined text-xl">home</span> Home
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="category.html">
+                        <span class="material-symbols-outlined text-xl">grid_view</span> Categories
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="best-specs.html">
+                        <span class="material-symbols-outlined text-xl">bolt</span> Best Specs
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-bold text-[#630ed4] bg-purple-50" href="accessories.html">
+                        <span class="material-symbols-outlined text-xl">headphones</span> Accessories
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="about.html">
+                        <span class="material-symbols-outlined text-xl">info</span> About Us
+                    </a>
+                    <a class="flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="contact.html">
+                        <span class="material-symbols-outlined text-xl">mail</span> Contact
+                    </a>
+                </div>
+            </details>
+        </div>
+    </header>
 
-				<div>
-					<h3 class="font-bold text-xl text-purple-600 mb-4">Contact</h3>
-					<p class="mb-2">📍 Chennai, Tamil Nadu, India</p>
-					<p class="mb-2">✉️ contact@mobileworld.com</p>
-					<p class="mb-2">📞 +91 98765 43201</p>
-				</div>
-			</div>
-			<div class="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-blue-500">© 2024 Mobile World. All rights reserved.</div>
-		</div>
+    <!-- HEADER / HERO -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6 w-full">
+        <div class="max-w-3xl">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1 text-xs font-extrabold text-[#630ed4] mb-3">
+                <span class="material-symbols-outlined text-sm">devices</span>
+                Essential Smartphone Ecosystem
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+                Curated Accessories & <span class="bg-gradient-to-r from-[#630ed4] to-pink-600 bg-clip-text text-transparent">Power Gear</span>
+            </h1>
+            <p class="mt-3 text-slate-600 text-base sm:text-lg font-medium">
+                Protect, power, and enhance your daily smartphone experience with certified tempered glass, ergonomic cases, GaN fast chargers, and wireless audio.
+            </p>
+        </div>
+
+        <!-- CATEGORY TABS -->
+        <div class="mt-8 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
+            <button onclick="filterAccessoryCategory('all', this)" class="category-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-[#630ed4] text-white shadow-md shadow-purple-600/25 transition cursor-pointer">
+                All Accessories
+            </button>
+            <button onclick="filterAccessoryCategory('glass', this)" class="category-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-200 text-slate-700 hover:border-purple-300 hover:text-[#630ed4] shadow-2xs transition cursor-pointer">
+                🛡️ Tempered Glass
+            </button>
+            <button onclick="filterAccessoryCategory('cases', this)" class="category-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-200 text-slate-700 hover:border-purple-300 hover:text-[#630ed4] shadow-2xs transition cursor-pointer">
+                📱 Protective Cases
+            </button>
+            <button onclick="filterAccessoryCategory('audio', this)" class="category-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-200 text-slate-700 hover:border-purple-300 hover:text-[#630ed4] shadow-2xs transition cursor-pointer">
+                🎧 Wireless Audio
+            </button>
+            <button onclick="filterAccessoryCategory('chargers', this)" class="category-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-200 text-slate-700 hover:border-purple-300 hover:text-[#630ed4] shadow-2xs transition cursor-pointer">
+                ⚡ Fast Chargers & Cables
+            </button>
+            <button onclick="filterAccessoryCategory('powerbanks', this)" class="category-filter-btn px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-200 text-slate-700 hover:border-purple-300 hover:text-[#630ed4] shadow-2xs transition cursor-pointer">
+                🔋 Power Banks
+            </button>
+        </div>
+    </section>
+
+    <!-- ACCESSORIES CATALOG GRID -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="accessoryGrid">
+            
+            <!-- 1. Tempered Glass Basic -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="glass">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/basic-tempered.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="Basic Tempered Glass">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">Screen Guard</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">Basic HD Tempered Glass</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">Edge-to-edge scratch protection with 99.9% optical transparency and oleophobic coating.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹99</span>
+                        <span class="text-xs font-bold text-slate-400">Universal Fit</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. 9H Hardness Glass -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="glass">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/9h-hardness.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="9H Hardness Glass">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">9H Armor</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">9H Toughened Armor Glass</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">Drop-tested military-grade scratch shield with reinforced curved edges.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹249</span>
+                        <span class="text-xs font-bold text-[#630ed4]">Anti-Shatter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Back Cover b-1 -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="cases">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/b-1.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="Slim Matte Case">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">Matte Case</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">Ultra-Slim Shockproof Matte Case</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">Silky soft-touch matte finish with raised camera lip and tactile metal buttons.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹299</span>
+                        <span class="text-xs font-bold text-slate-400">Anti-Fingerprint</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Back Cover b-2 -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="cases">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/b-2.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="Liquid Silicone Case">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">Silicone Case</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">Liquid Silicone Comfort Grip</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">Microfiber inner lining preventing device micro-scratches during daily use.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹349</span>
+                        <span class="text-xs font-bold text-slate-400">Soft Microfiber</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Headphone h-1 -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="audio">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/h-1.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="TWS ANC Earbuds">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">ANC Earbuds</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">Pro ANC Wireless Earbuds</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">Active Noise Cancellation up to 48dB with spatial audio and 38-hour battery.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹1,999</span>
+                        <span class="text-xs font-bold text-[#630ed4]">Spatial Audio</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Charger c-1 -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="chargers">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/c-1.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="65W GaN Fast Charger">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">65W GaN</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">65W GaN Multi-Port Fast Charger</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">Dual USB-C Power Delivery with universal fast charging for laptops and phones.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹1,499</span>
+                        <span class="text-xs font-bold text-slate-400">USB-PD 3.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7. Power Bank p-1 -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="powerbanks">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/p-1.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="20,000mAh Power Bank">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">20,000mAh</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">20,000mAh 33W Fast Power Bank</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">Triple output ports with digital LED battery percentage display.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹1,799</span>
+                        <span class="text-xs font-bold text-slate-400">Flight Safe</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8. Audio h-2 -->
+            <div class="accessory-card group bg-white rounded-3xl p-5 border border-slate-200 shadow-xs hover:shadow-xl hover:border-purple-300 transition-all duration-300 flex flex-col" data-cat="audio">
+                <div class="relative overflow-hidden rounded-2xl accessory-canvas p-4 flex items-center justify-center">
+                    <img src="assets/images/site/h-2.jpeg" class="h-48 w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-sm" alt="Studio Over-Ear Wireless">
+                    <span class="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-[10px] font-black uppercase text-[#630ed4] border border-slate-100">Hi-Res Audio</span>
+                </div>
+                <div class="mt-4 flex-1 flex flex-col">
+                    <h3 class="text-base font-black text-slate-900">Studio Pro Over-Ear Wireless</h3>
+                    <p class="text-xs text-slate-500 mt-1 flex-1 font-medium">40mm titanium drivers with LDAC lossless streaming and memory foam ear cushions.</p>
+                    <div class="mt-4 flex items-center justify-between pt-3 border-t border-slate-100">
+                        <span class="text-xl font-black text-emerald-600">₹3,499</span>
+                        <span class="text-xs font-bold text-[#630ed4]">LDAC Lossless</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-slate-950 text-slate-400 border-t border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center gap-2.5 text-xl font-black text-white mb-4">
+                        <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-[#630ed4] text-white shadow-md">
+                            <span class="material-symbols-outlined text-base">devices_other</span>
+                        </div>
+                        <span>Mobile<span class="text-purple-400">World</span></span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-slate-400">
+                        Empowering smart tech choices with data-driven smartphone insights, accurate specs, and unbiased rankings.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Resources</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="hover:text-purple-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="category.html" class="hover:text-purple-400 transition">Categories</a></li>
+                        <li><a href="best-specs.html" class="hover:text-purple-400 transition">Best Specs</a></li>
+                        <li><a href="accessories.html" class="text-purple-400 font-semibold hover:text-purple-300 transition">Accessories</a></li>
+                        <li><a href="about.html" class="hover:text-purple-400 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white mb-4">Contact</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>📍 Chennai, Tamil Nadu, India</li>
+                        <li>✉️ contact@mobileworld.com</li>
+                        <li>📞 +91 98765 43201</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800/80 pt-8 text-center text-xs text-slate-500">
+                © 2025 Mobile World Inc. All rights reserved.
+            </div>
+        </div>
     </footer>
-	</body>
+
+    <script>
+        function filterAccessoryCategory(cat, btn) {
+            document.querySelectorAll('.category-filter-btn').forEach(b => {
+                b.classList.remove('bg-[#630ed4]', 'text-white', 'shadow-md', 'shadow-purple-600/25');
+                b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+            });
+            btn.classList.add('bg-[#630ed4]', 'text-white', 'shadow-md', 'shadow-purple-600/25');
+            btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+
+            const cards = document.querySelectorAll('.accessory-card');
+            cards.forEach(card => {
+                if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
 </html>
