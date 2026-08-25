@@ -1,139 +1,1117 @@
-<html>
-	<head>
-		<title>Categories - Mobile World</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<header class="sticky top-0 z-50 bg-[#fef7ff]/95 backdrop-blur-md border-b border-[#eadff1] shadow-sm">
-		<div class="mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-			<a class="font-[Plus_Jakarta_Sans] text-[24px] font-bold text-[#630ed4] tracking-normal" href="index.html">Mobile World</a>
-			<nav class="hidden md:flex items-center gap-8">
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="index.html">Home</a>
-				<a class="text-[14px] font-semibold text-[#630ed4] border-b-2 border-[#630ed4] pb-1 transition-colors" href="category.html">Categories</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="best-specs.html">Best Specs</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="accessories.html">accessories</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="about.html">About Us</a>
-				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="contact.html">Contact</a>
-			</nav>
-			<a class="hidden md:inline-flex items-center justify-center rounded-full bg-[#630ed4] px-5 py-2 text-[14px] font-bold text-white shadow-sm transition-all hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
-			<details class="relative md:hidden">
-				<summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md text-[#4a4455] hover:bg-[#f3ebfa]">
-					<span class="material-symbols-outlined">menu</span>
-				</summary>
-				<div class="absolute right-0 mt-3 w-56 rounded-lg border border-[#eadff1] bg-white p-2 shadow-lg">
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="index.html">Home</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#630ed4] bg-[#f3ebfa]" href="category.html">Categories</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="best-specs.html">Best Specs</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="accessories.html">accessories</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="about.html">About Us</a>
-					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="contact.html">Contact</a>
-					<a class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#630ed4] px-4 py-2 text-[14px] font-bold text-white hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
-				</div>
-			</details>
-		</div>
-	</header>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone Categories by Budget | Mobile World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-[#faf8fd] text-slate-800 antialiased flex flex-col min-h-screen">
 
-		<section class="max-w-6xl mx-auto px-6 py-16 text-center">
-			<h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4">Browse by Category</h1>
-			<p class="max-w-2xl mx-auto text-gray-600 mb-12">Not sure where to start? Pick a category below and we'll point you toward phones that match your needs and budget.</p>
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-					<h3 class="text-xl font-bold text-purple-800 mb-2">Budget Phones</h3>
-					<p class="text-sm text-gray-600 mb-4">Reliable everyday phones that cover calls, browsing, and social media without stretching your wallet.</p>
-					<p class="text-sm font-semibold text-pink-600">Under ₹15,000</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-					<h3 class="text-xl font-bold text-purple-800 mb-2">Mid-Range Phones</h3>
-					<p class="text-sm text-gray-600 mb-4">The sweet spot between price and performance — good cameras, smooth software, all-day battery.</p>
-					<p class="text-sm font-semibold text-pink-600">₹15,000 – ₹35,000</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-					<h3 class="text-xl font-bold text-purple-800 mb-2">Flagship Phones</h3>
-					<p class="text-sm text-gray-600 mb-4">Top-tier chipsets, premium build, and the newest camera systems for those who want the best.</p>
-					<p class="text-sm font-semibold text-pink-600">₹35,000+</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-					<h3 class="text-xl font-bold text-purple-800 mb-2">Gaming Phones</h3>
-					<p class="text-sm text-gray-600 mb-4">High refresh-rate displays and powerful processors built to handle demanding mobile games.</p>
-					<p class="text-sm font-semibold text-pink-600">₹25,000+</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-					<h3 class="text-xl font-bold text-purple-800 mb-2">Camera-Focused Phones</h3>
-					<p class="text-sm text-gray-600 mb-4">Phones tuned for photography — larger sensors, multiple lenses, and strong low-light performance.</p>
-					<p class="text-sm font-semibold text-pink-600">₹20,000+</p>
-				</div>
-				<div class="bg-white p-6 rounded-xl border border-gray-200 shadow-md hover:shadow-lg hover:-translate-y-1 transition">
-					<h3 class="text-xl font-bold text-purple-800 mb-2">5G Ready Phones</h3>
-					<p class="text-sm text-gray-600 mb-4">Future-proof devices with 5G connectivity for faster downloads and smoother streaming.</p>
-					<p class="text-sm font-semibold text-pink-600">₹12,000+</p>
-				</div>
-			</div>
-		</section>
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-purple-100 shadow-xs transition-all">
+        <div class="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <!-- Brand Logo -->
+            <a class="flex items-center gap-2 text-2xl font-extrabold text-[#630ed4] tracking-tight hover:opacity-90 transition" href="index.html">
+                <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-600 text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">smartphone</span>
+                </span>
+                <span>Mobile<span class="text-slate-900">World</span></span>
+            </a>
 
-		<section class="max-w-6xl mx-auto px-6 pb-16">
-			<h2 class="text-2xl font-bold text-purple-900 text-center mb-6">Shop by Brand</h2>
-			<div class="flex flex-wrap justify-center gap-3">
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">Apple</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">Samsung</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">OnePlus</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">Google Pixel</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">Xiaomi</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">vivo</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">OPPO</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">realme</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">Nothing</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">iQOO</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">Motorola</span>
-				<span class="px-5 py-2 rounded-full bg-purple-50 border border-purple-200 text-purple-800 font-semibold text-sm hover:bg-purple-200 transition">POCO</span>
-			</div>
-		</section>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="index.html">Home</a>
+                <a class="px-3.5 py-2 text-sm font-bold text-[#630ed4] bg-purple-50 rounded-full transition-colors" href="category.html">Categories</a>
+                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="best-specs.html">Best Specs</a>
+                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="accessories.html">Accessories</a>
+                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="about.html">About Us</a>
+                <a class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-[#630ed4] hover:bg-purple-50/60 rounded-full transition-all" href="contact.html">Contact</a>
+            </nav>
 
-		<footer class="bg-purple-100 border-t border-gray-200 mt-12">
-		<div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
-			<div class="grid gap-8 md:grid-cols-4">
-				<div>
-					<h3 class="text-2xl font-bold text-purple-700">Mobile World</h3>
-					<p class="mt-3 max-w-sm text-sm text-gray-600">Empowering your tech choices with data-driven smartphone insights and comparisons.</p>
-					<div class="mt-4 flex gap-3">
-					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">🐦</p>
-					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">📸</p>
-					</div>
-				</div>
+            <!-- Sign In Button -->
+            <div class="hidden md:flex items-center gap-3">
+                <a class="inline-flex items-center justify-center rounded-full bg-[#630ed4] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-purple-200 transition-all hover:bg-[#520bb4] hover:shadow-lg hover:-translate-y-0.5" href="sign-in.html">
+                    Sign In
+                </a>
+            </div>
 
-				<div>
-					<h4 class="text-lg font-semibold text-purple-800">Resources</h4>
-					<ul class="mt-4 space-y-2 text-sm">
-					  <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Cookie Policy</a></li>
-					  <li><a href="#" class="hover:text-purple-600">Support</a></li>
-					</ul>
-				</div>
+            <!-- Mobile Menu -->
+            <details class="relative md:hidden group">
+                <summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-xl border border-purple-100 text-slate-700 hover:bg-purple-50 focus:outline-none">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </summary>
+                <div class="absolute right-0 mt-3 w-64 origin-top-right rounded-2xl border border-purple-100 bg-white p-3 shadow-xl backdrop-blur-lg">
+                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="index.html">
+                        <span class="material-symbols-outlined text-lg">home</span> Home
+                    </a>
+                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-bold text-[#630ed4] bg-purple-50" href="category.html">
+                        <span class="material-symbols-outlined text-lg">category</span> Categories
+                    </a>
+                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="best-specs.html">
+                        <span class="material-symbols-outlined text-lg">bolt</span> Best Specs
+                    </a>
+                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="accessories.html">
+                        <span class="material-symbols-outlined text-lg">headphones</span> Accessories
+                    </a>
+                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="about.html">
+                        <span class="material-symbols-outlined text-lg">info</span> About Us
+                    </a>
+                    <a class="flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium text-slate-700 hover:text-[#630ed4] hover:bg-purple-50/60 transition" href="contact.html">
+                        <span class="material-symbols-outlined text-lg">mail</span> Contact
+                    </a>
+                    <div class="mt-2 pt-2 border-t border-purple-50">
+                        <a class="flex w-full items-center justify-center rounded-xl bg-[#630ed4] px-4 py-2.5 text-sm font-semibold text-white shadow-md shadow-purple-200 transition hover:bg-[#520bb4]" href="sign-in.html">
+                            Sign In
+                        </a>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </header>
 
-				<div>
-					<h4 class="text-lg font-semibold text-purple-800">Quick Links</h4>
-					<ul class="mt-4 space-y-2 text-sm ">
-					  <li><a href="index.html" class="hover:text-purple-600">Home</a></li>
-					  <li><a href="category.html" class="hover:text-purple-600">Categories</a></li>
-					  <li><a href="best-specs.html" class="hover:text-purple-600">Best Specs</a></li>
-					  <li><a href="accessories.html" class="hover:text-purple-600">Accessories</a></li>
-					  <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
-					  <li><a href="contact.html" class="hover:text-purple-600">Contact</a></li>
-					</ul>
-				</div>
+    <!-- PAGE HEADER -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+        <div class="max-w-3xl">
+            <span class="inline-flex items-center gap-1.5 rounded-full border border-purple-200 bg-purple-50 px-3.5 py-1 text-xs font-bold text-purple-700 mb-3">
+                <span class="material-symbols-outlined text-sm">filter_alt</span> Budget Catalog
+            </span>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+                Find Smartphones by <span class="bg-gradient-to-r from-[#630ed4] to-pink-600 bg-clip-text text-transparent">Budget</span>
+            </h1>
+            <p class="mt-3 text-base sm:text-lg text-slate-600">
+                Whether you are looking for an affordable daily driver or a premium flagship monster, explore curated smartphones tailored to your exact budget tier.
+            </p>
+        </div>
 
-				<div>
-					<h3 class="font-bold text-xl text-purple-600 mb-4">Contact</h3>
-					<p class="mb-2">📍 Chennai, Tamil Nadu, India</p>
-					<p class="mb-2">✉️ contact@mobileworld.com</p>
-					<p class="mb-2">📞 +91 98765 43201</p>
-				</div>
-			</div>
-			<div class="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-blue-500">© 2024 Mobile World. All rights reserved.</div>
-		</div>
+        <!-- QUICK JUMP PILLS -->
+        <div class="mt-8 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
+            <span class="text-xs font-bold uppercase tracking-wider text-slate-400 whitespace-nowrap mr-2">Jump to:</span>
+            <a href="#under-15k" class="whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-slate-700 hover:text-purple-700 transition shadow-xs">Under ₹15,000</a>
+            <a href="#under-20k" class="whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-slate-700 hover:text-purple-700 transition shadow-xs">Under ₹20,000</a>
+            <a href="#under-30k" class="whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-slate-700 hover:text-purple-700 transition shadow-xs">Under ₹30,000</a>
+            <a href="#under-40k" class="whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-slate-700 hover:text-purple-700 transition shadow-xs">Under ₹40,000</a>
+            <a href="#under-60k" class="whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-slate-700 hover:text-purple-700 transition shadow-xs">Under ₹60,000</a>
+            <a href="#under-80k" class="whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-slate-700 hover:text-purple-700 transition shadow-xs">Under ₹80,000</a>
+            <a href="#above-1l" class="whitespace-nowrap px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-slate-700 hover:text-purple-700 transition shadow-xs">Above ₹1,00,000</a>
+        </div>
+    </section>
+
+    <!-- MAIN PRODUCT LISTINGS -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-16">
+
+        <!-- SECTION 1: Under ₹15,000 -->
+        <section id="under-15k" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#630ed4] to-purple-600 px-5 py-2.5 text-lg font-bold text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    Under &#8377;15,000
+                </span>
+                <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phone 1 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">POCO</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;10,000</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/poco-m7-5g/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="POCO M7 5G">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">POCO M7 5G</h3>
+
+                    <!-- Specs Grid -->
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 4 Gen 2</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP AI</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5160mAh</span>
+                        </div>
+                    </div>
+
+                    <!-- Best For Tags -->
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Daily Use</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Entertainment</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Students</span>
+                    </div>
+
+                    <a href="products/poco-m7-5g.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Redmi</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;9,000</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/redmi-13c-5g/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Redmi 13C 5G">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Redmi 13C 5G</h3>
+
+                    <!-- Specs Grid -->
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Dimensity 6100+</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP AI Dual</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5000mAh</span>
+                        </div>
+                    </div>
+
+                    <!-- Best For Tags -->
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Daily Use</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Entertainment</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Students</span>
+                    </div>
+
+                    <a href="products/redmi-13c-5g.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Samsung</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;10,000</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/samsung-galaxy-f06-5g/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Galaxy F06 5G">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Galaxy F06 5G</h3>
+
+                    <!-- Specs Grid -->
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Dimensity 6300</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP + 2MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5000mAh</span>
+                        </div>
+                    </div>
+
+                    <!-- Best For Tags -->
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Reliable Performance</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Long Support</span>
+                    </div>
+
+                    <a href="products/samsung-galaxy-f06-5g.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Under ₹20,000 -->
+        <section id="under-20k" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#630ed4] to-purple-600 px-5 py-2.5 text-lg font-bold text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    Under &#8377;20,000
+                </span>
+                <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phone 1 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">CMF by Nothing</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;18,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/cmf-phone-2-pro/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="CMF Phone 2 Pro">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">CMF Phone 2 Pro</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Dimensity 7300</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+50+8MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5000mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Clean Software</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Camera</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Unique Design</span>
+                    </div>
+
+                    <a href="products/cmf-phone-2-pro.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">vivo</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;19,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/vivo-t4-5g/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="vivo T4 5G">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">vivo T4 5G</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 7s Gen 3</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP + 2MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">7300mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Massive Battery</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Photography</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Performance</span>
+                    </div>
+
+                    <a href="products/vivo-t4-5g.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">POCO</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;19,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/poco-x7-pro/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="POCO X7 Pro">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">POCO X7 Pro</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Dimensity 8400</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP + 8MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">6550mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Extreme Gaming</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Fast Charging</span>
+                    </div>
+
+                    <a href="products/poco-x7-pro.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Under ₹30,000 -->
+        <section id="under-30k" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#630ed4] to-purple-600 px-5 py-2.5 text-lg font-bold text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    Under &#8377;30,000
+                </span>
+                <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phone 1 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">OnePlus</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;29,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/oneplus-nord-5/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="OnePlus Nord 5">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">OnePlus Nord 5</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8s Gen 3</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP + 8MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">6800mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Smooth UI</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Gaming</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Selfies</span>
+                    </div>
+
+                    <a href="products/oneplus-nord-5.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">realme</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;29,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/realme-gt-7t/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="realme GT 7T">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">realme GT 7T</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Dimensity 8400 Max</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP + 8MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">7000mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">7000mAh Battery</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Fast Charge</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Gaming</span>
+                    </div>
+
+                    <a href="products/realme-gt-7t.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">iQOO</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;29,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/iqoo-neo-10/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="iQOO Neo 10">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">iQOO Neo 10</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8s Gen 4</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP + 8MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">7000mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Extreme Gaming</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Heavy Multitasking</span>
+                    </div>
+
+                    <a href="products/iqoo-neo-10.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Under ₹40,000 -->
+        <section id="under-40k" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#630ed4] to-purple-600 px-5 py-2.5 text-lg font-bold text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    Under &#8377;40,000
+                </span>
+                <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phone 1 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Google</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;39,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/google-pixel-9a/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Google Pixel 9a">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Google Pixel 9a</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Tensor G4</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">48MP + 13MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5100mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Pro Camera</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Pixel AI</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Clean Android</span>
+                    </div>
+
+                    <a href="products/google-pixel-9a.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Motorola</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;35,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/motorola-edge-60-fusion/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Motorola Edge 60 Fusion">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Edge 60 Fusion</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Dimensity 7400</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50MP + 13MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5500mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Curved Display</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Clean UI</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Camera</span>
+                    </div>
+
+                    <a href="products/motorola-edge-60-fusion.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Samsung</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;30,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/samsung-galaxy-a36-5g/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Galaxy A36 5G">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Galaxy A36 5G</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 6 Gen 3</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+8+5MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5000mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">AMOLED 120Hz</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Long Updates</span>
+                    </div>
+
+                    <a href="products/samsung-galaxy-a36-5g.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Under ₹60,000 -->
+        <section id="under-60k" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#630ed4] to-purple-600 px-5 py-2.5 text-lg font-bold text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    Under &#8377;60,000
+                </span>
+                <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phone 1 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">OnePlus</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;42,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/oneplus-13r/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="OnePlus 13R">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">OnePlus 13R</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8 Gen 3</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+50+8MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">6000mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Flagship Killer</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Gaming</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Battery</span>
+                    </div>
+
+                    <a href="products/oneplus-13r.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Xiaomi</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;59,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/xiaomi-15/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Xiaomi 15">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Xiaomi 15</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8 Elite</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+50+50MP Leica</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5240mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Leica Optics</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Elite Chip</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Compact</span>
+                    </div>
+
+                    <a href="products/xiaomi-15.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">vivo</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;59,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/vivo-x200/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="vivo X200">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">vivo X200</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Dimensity 9400</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+50+50MP ZEISS</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5800mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">ZEISS Camera</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Portrait King</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Battery</span>
+                    </div>
+
+                    <a href="products/vivo-x200.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Under ₹80,000 -->
+        <section id="under-80k" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#630ed4] to-purple-600 px-5 py-2.5 text-lg font-bold text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    Under &#8377;80,000
+                </span>
+                <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phone 1 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Samsung</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;74,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/samsung-galaxy-s25/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Galaxy S25">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Galaxy S25</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8 Elite</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+12+10MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">4000mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Compact Flagship</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Galaxy AI</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Photography</span>
+                    </div>
+
+                    <a href="products/samsung-galaxy-s25.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Apple</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;74,900</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/apple-iphone-16/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="iPhone 16">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">iPhone 16</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Apple A18</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">48MP + 12MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">3561mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Cinematic 4K</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">iOS Ecosystem</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Long Support</span>
+                    </div>
+
+                    <a href="products/apple-iphone-16.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">vivo</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;78,900</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/vivo-x300/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="vivo X300 FE">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">vivo X300 FE</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8 Gen 5</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+50+8MP ZEISS</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">6500mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">ZEISS Triple Cam</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">6500mAh</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Flagship</span>
+                    </div>
+
+                    <a href="products/vivo-x300-fe.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Above ₹1,00,000 -->
+        <section id="above-1l" class="scroll-mt-24">
+            <div class="flex items-center gap-3 mb-6">
+                <span class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-[#630ed4] to-purple-600 px-5 py-2.5 text-lg font-bold text-white shadow-md shadow-purple-200">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    Above &#8377;1,00,000
+                </span>
+                <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-200 to-transparent"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Phone 1 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Samsung</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;1,17,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/samsung-galaxy-s25-ultra/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Galaxy S25 Ultra">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Galaxy S25 Ultra</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8 Elite</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">200+50+50+10MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5000mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">200MP Zoom King</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">S-Pen</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Galaxy AI</span>
+                    </div>
+
+                    <a href="products/samsung-galaxy-s25-ultra.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 2 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Apple</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;1,44,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/apple-iphone-16-pro-max/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="iPhone 16 Pro Max">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">iPhone 16 Pro Max</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">Apple A18 Pro</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">48+48+12MP</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">4685mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">ProRes 4K 120</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Titanium</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">A18 Pro</span>
+                    </div>
+
+                    <a href="products/apple-iphone-16-pro-max.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+
+                <!-- Phone 3 -->
+                <div class="group flex flex-col rounded-3xl bg-white p-5 border border-purple-100 shadow-sm hover:shadow-xl hover:border-purple-300 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-xs font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-3 py-1 rounded-full">Xiaomi</span>
+                        <span class="text-xl font-extrabold text-emerald-600">&#8377;1,20,999</span>
+                    </div>
+                    <div class="relative overflow-hidden rounded-2xl bg-[#faf8fd] p-4 flex items-center justify-center">
+                        <img src="assets/images/phones/xiaomi-15-ultra/main.jpeg" class="h-56 w-full object-contain group-hover:scale-105 transition-transform duration-300" alt="Xiaomi 15 Ultra">
+                    </div>
+                    <h3 class="mt-4 text-xl font-bold text-slate-900">Xiaomi 15 Ultra</h3>
+
+                    <div class="mt-4 grid grid-cols-3 gap-2 text-xs">
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/chip.png" class="h-6 w-6 object-contain mb-1" alt="Chip">
+                            <span class="font-medium text-slate-700">SD 8 Elite</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/photo.png" class="h-6 w-6 object-contain mb-1" alt="Camera">
+                            <span class="font-medium text-slate-700">50+50+50+200MP Leica</span>
+                        </div>
+                        <div class="flex flex-col items-center text-center p-2 rounded-xl bg-purple-50/60 border border-purple-50">
+                            <img src="assets/images/site/battery.png" class="h-6 w-6 object-contain mb-1" alt="Battery">
+                            <span class="font-medium text-slate-700">5410mAh</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-1.5">
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">200MP Leica Tele</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Pro Camera</span>
+                        <span class="text-[11px] font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded-md">Elite Chip</span>
+                    </div>
+
+                    <a href="products/xiaomi-15-ultra.html" class="mt-6 block">
+                        <button class="w-full flex items-center justify-center gap-2 rounded-xl bg-[#630ed4] hover:bg-[#520bb4] py-3 text-sm font-bold text-white shadow-md shadow-purple-100 hover:shadow-lg transition cursor-pointer">
+                            <span>View Details</span>
+                            <span class="material-symbols-outlined text-base">arrow_forward</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto bg-slate-900 text-slate-400 border-t border-slate-800">
+        <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand Info -->
+                <div>
+                    <div class="flex items-center gap-2 text-xl font-bold text-white mb-4">
+                        <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-purple-600 text-white">
+                            <span class="material-symbols-outlined text-sm">smartphone</span>
+                        </span>
+                        Mobile World
+                    </div>
+                    <p class="text-sm leading-relaxed text-slate-400">
+                        Empowering your tech choices with data-driven smartphone insights, accurate specs, and unbiased comparisons.
+                    </p>
+                    <div class="mt-4 flex gap-2">
+                        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 text-purple-400 hover:bg-purple-600 hover:text-white transition cursor-pointer">🐦</span>
+                        <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-800 text-purple-400 hover:bg-purple-600 hover:text-white transition cursor-pointer">📸</span>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Resources</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="#" class="hover:text-purple-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition">Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+                        <li><a href="category.html" class="text-purple-400 font-semibold hover:text-purple-300 transition">Categories</a></li>
+                        <li><a href="best-specs.html" class="hover:text-purple-400 transition">Best Specs</a></li>
+                        <li><a href="accessories.html" class="hover:text-purple-400 transition">Accessories</a></li>
+                        <li><a href="about.html" class="hover:text-purple-400 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-purple-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-white mb-4">Contact</h4>
+                    <ul class="space-y-2.5 text-sm">
+                        <li class="flex items-center gap-2"><span>📍</span> Chennai, Tamil Nadu, India</li>
+                        <li class="flex items-center gap-2"><span>✉️</span> contact@mobileworld.com</li>
+                        <li class="flex items-center gap-2"><span>📞</span> +91 98765 43201</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+                <p>© 2025 Mobile World. All rights reserved.</p>
+                <p>Designed for tech enthusiasts & smartphone buyers.</p>
+            </div>
+        </div>
     </footer>
-	</body>
+</body>
 </html>
