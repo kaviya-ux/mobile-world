@@ -1,174 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Mobile World</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #f9fafb;
-            color: #1f2937;
-        }
-    </style>
-</head>
-<body class="flex flex-col min-h-screen">
+<html>
+<head>	
+<title>MOBILE WORLD</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+		</script>
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-white">	
+		<header class="sticky top-0 z-50 bg-[#fef7ff]/95 backdrop-blur-md border-b border-[#eadff1] shadow-sm">
+		<div class="mx-auto flex h-[64px] w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+			<a class="font-[Plus_Jakarta_Sans] text-[24px] font-bold text-[#630ed4] tracking-normal" href="index.html">Mobile World</a>
+			<nav class="hidden md:flex items-center gap-8">
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="index.html">Home</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="category.html">Categories</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="best-specs.html">Best Specs</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="accessories.html">accessories</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="about.html">About Us</a>
+				<a class="text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] pb-1 transition-colors" href="contact.html">Contact</a>
+			</nav>
+			<a class="hidden md:inline-flex items-center justify-center rounded-full bg-[#630ed4] px-5 py-2 text-[14px] font-bold text-white shadow-sm ring-2 ring-[#630ed4]/20 transition-all hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
+			<details class="relative md:hidden">
+				<summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-md text-[#4a4455] hover:bg-[#f3ebfa]">
+					<span class="material-symbols-outlined">menu</span>
+				</summary>
+				<div class="absolute right-0 mt-3 w-56 rounded-lg border border-[#eadff1] bg-white p-2 shadow-lg">
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="index.html">Home</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="category.html">Categories</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="best-specs.html">Best Specs</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="accessories.html">accessories</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="about.html">About Us</a>
+					<a class="block rounded-md px-3 py-2 text-[14px] font-semibold text-[#4a4455] hover:text-[#630ed4] hover:bg-[#f3ebfa]" href="contact.html">Contact</a>
+					<a class="mt-2 inline-flex w-full items-center justify-center rounded-full bg-[#630ed4] px-4 py-2 text-[14px] font-bold text-white hover:bg-[#520bb4]" href="sign-in.html">Sign In</a>
+				</div>
+			</details>
+		</div>
+	</header>
+		<main class="mx-auto flex min-h-[calc(100vh-64px)] max-w-6xl items-center justify-center px-4 py-12">
+			<div class="w-full max-w-md rounded-xl border border-gray-200 bg-white p-6 shadow-lg shadow-gray-300">
+				<form name="myform" method="post" action="#" onsubmit="return validateform()" class="w-full">
+				<!-- Name -->
+				<label class="font-semibold">Name</label>
+				<input type="text" name="name" placeholder="Enter your name"class="w-full border p-3 rounded mb-4 focus:outline-blue-500">
+				<label class="font-semibold">Phone Number</label>
+				<input type="text" name="num" placeholder="Enter phone number" class="w-full border p-3 rounded mb-4 focus:outline-blue-500">
+				<span id="numloc"></span>
+				<!-- Email -->
+				<label class="font-semibold">Email</label>
+				<input type="email" name="email" placeholder="Enter email"class="w-full border p-3 rounded mb-4 focus:outline-blue-500">
+				<!-- Password -->
+				<label class="font-semibold">Password</label>
+				<input type="password" name="password"	placeholder="Enter password"class="w-full border p-3 rounded mb-4 focus:outline-blue-500">
+				<!-- Re-enter Password -->
+				<label class="font-semibold">Re-enter Password</label>
+				<input type="password" id="password2" placeholder="Re-enter password"class="w-full border p-3 rounded mb-5 focus:outline-blue-500">
+				<button type="submit"class="bg-blue-600 text-white w-full p-3 rounded hover:bg-blue-800">
+				Login
+				</button>
+				</form>
+			</div>
+		</main>
+		<script>
+		function validateform(){
+		var name=document.myform.name.value;
+		var num=document.myform.num.value;
+		var email=document.myform.email.value;
+		var password=document.myform.password.value;
+		var secondpassword=document.myform.password2.value;
+		if(name=="")
+		{
+			alert("Name can't be blank");
+			return false;
+		}
+		if(isNaN(num) || num.length!=10)
+		{
+			alert("Enter valid 10 digit phone number");
+			return false;
+		}
+		if(!/^([a-zA-Z0-9]+)@([a-zA-Z]+)\.([a-z]{2,5})$/.test(email))
+		{
+			alert("Incorrect Email");
+			return false;
+		}
+		if(password.length<6)
+		{
+			alert("Password must be at least 6 characters");
+			return false;
+		}
+		if(password!=secondpassword)
+		{
+			alert("Passwords do not match");
+			return false;
+		}
+		alert("Login Successful");
+		return true;
+		}
+		</script>
+		  <footer class="bg-purple-100 border-t border-gray-200 mt-12">
+		<div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+			<div class="grid gap-8 md:grid-cols-4">
+				<div>
+					<h3 class="text-2xl font-bold text-purple-700">Mobile World</h3>
+					<p class="mt-3 max-w-sm text-sm text-gray-600">Empowering your tech choices with data-driven smartphone insights and comparisons.</p>
+					<div class="mt-4 flex gap-3">
+					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">🐦</p>
+					  <p  class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-purple-50 text-purple-600">📸</p>
+					</div>
+				</div>
 
-    <!-- NAVIGATION BAR -->
-    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-xs">
-        <div class="max-w-7xl mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-            <!-- Brand Logo -->
-            <a class="flex items-center gap-2.5" href="index.html">
-                <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-[#630ed4] text-white">
-                    <span class="material-symbols-outlined text-2xl">devices_other</span>
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold text-gray-900">Mobile<span class="text-[#630ed4]">World</span></span>
-                    <span class="text-[10px] font-semibold uppercase text-gray-500 tracking-wider">Smartphone Guide</span>
-                </div>
-            </a>
+				<div>
+					<h4 class="text-lg font-semibold text-purple-800">Resources</h4>
+					<ul class="mt-4 space-y-2 text-sm">
+					  <li><a href="#" class="hover:text-purple-600">Privacy Policy</a></li>
+					  <li><a href="#" class="hover:text-purple-600">Terms of Service</a></li>
+					  <li><a href="#" class="hover:text-purple-600">Cookie Policy</a></li>
+					  <li><a href="#" class="hover:text-purple-600">Support</a></li>
+					</ul>
+				</div>
 
-            <!-- Desktop Links -->
-            <nav class="hidden lg:flex items-center gap-2">
-                <a class="px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#630ed4] hover:bg-gray-50 rounded-lg transition" href="index.html">Home</a>
-                <a class="px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#630ed4] hover:bg-gray-50 rounded-lg transition" href="category.html">Categories</a>
-                <a class="px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#630ed4] hover:bg-gray-50 rounded-lg transition" href="best-specs.html">Best Specs</a>
-                <a class="px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#630ed4] hover:bg-gray-50 rounded-lg transition" href="accessories.html">Accessories</a>
-                <a class="px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#630ed4] hover:bg-gray-50 rounded-lg transition" href="about.html">About Us</a>
-                <a class="px-4 py-2 text-sm font-semibold text-gray-600 hover:text-[#630ed4] hover:bg-gray-50 rounded-lg transition" href="contact.html">Contact</a>
-            </nav>
-
-            <!-- Right Buttons -->
-            <div class="hidden md:flex items-center gap-3">
-                <a href="category.html" class="flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3.5 py-2 rounded-lg transition">
-                    <span class="material-symbols-outlined text-base text-[#630ed4]">search</span>
-                    <span>Search Phones</span>
-                </a>
-                <a class="inline-flex items-center justify-center rounded-lg bg-[#630ed4] px-5 py-2 text-sm font-semibold text-white hover:bg-[#520bb4] transition shadow-xs" href="sign-in.html">
-                    Sign In
-                </a>
-            </div>
-
-            <!-- Mobile Menu -->
-            <details class="relative lg:hidden group">
-                <summary class="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50">
-                    <span class="material-symbols-outlined text-2xl">menu</span>
-                </summary>
-                <div class="absolute right-0 mt-2 w-64 rounded-2xl border border-gray-200 bg-white p-3 shadow-lg space-y-1">
-                    <a class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:text-[#630ed4] hover:bg-gray-50" href="index.html">
-                        <span class="material-symbols-outlined text-lg">home</span> Home
-                    </a>
-                    <a class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:text-[#630ed4] hover:bg-gray-50" href="category.html">
-                        <span class="material-symbols-outlined text-lg">grid_view</span> Categories
-                    </a>
-                    <a class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:text-[#630ed4] hover:bg-gray-50" href="best-specs.html">
-                        <span class="material-symbols-outlined text-lg">bolt</span> Best Specs
-                    </a>
-                    <a class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:text-[#630ed4] hover:bg-gray-50" href="accessories.html">
-                        <span class="material-symbols-outlined text-lg">headphones</span> Accessories
-                    </a>
-                    <a class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:text-[#630ed4] hover:bg-gray-50" href="about.html">
-                        <span class="material-symbols-outlined text-lg">info</span> About Us
-                    </a>
-                    <a class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:text-[#630ed4] hover:bg-gray-50" href="contact.html">
-                        <span class="material-symbols-outlined text-lg">mail</span> Contact
-                    </a>
-                    <div class="pt-2 mt-2 border-t border-gray-100">
-                        <a class="flex w-full items-center justify-center rounded-lg bg-[#630ed4] py-2 text-sm font-bold text-white hover:bg-[#520bb4]" href="sign-in.html">
-                            Sign In / Register
-                        </a>
-                    </div>
-                </div>
-            </details>
-        </div>
-    </header>
-
-    <!-- SIGN IN CARD -->
-    <main class="flex-1 flex items-center justify-center px-4 py-12">
-        <div class="w-full max-w-md bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 shadow-xs">
-            
-            <div class="text-center mb-6">
-                <div class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#630ed4] text-white mb-2">
-                    <span class="material-symbols-outlined text-2xl">lock</span>
-                </div>
-                <h1 class="text-2xl font-bold text-gray-900">Welcome Back</h1>
-                <p class="text-xs text-gray-500 mt-1">Sign in to save wishlist and compare devices</p>
-            </div>
-
-            <!-- Tab Switcher -->
-            <div class="grid grid-cols-2 bg-gray-100 p-1 rounded-lg mb-6 text-xs font-bold">
-                <button id="tabSignIn" onclick="switchAuthTab('signin')" class="py-2 rounded-md bg-white text-[#630ed4] shadow-xs cursor-pointer">
-                    Sign In
-                </button>
-                <button id="tabRegister" onclick="switchAuthTab('register')" class="py-2 rounded-md text-gray-600 cursor-pointer">
-                    Register
-                </button>
-            </div>
-
-            <!-- Form -->
-            <form onsubmit="event.preventDefault(); alert('Login successful! Welcome to Mobile World.'); window.location.href='index.html';" class="space-y-4">
-                <div id="nameField" class="hidden">
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Full Name</label>
-                    <input type="text" placeholder="John Doe" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:border-[#630ed4]">
-                </div>
-
-                <div>
-                    <label class="block text-xs font-bold text-gray-700 mb-1">Email Address</label>
-                    <input type="email" required placeholder="name@example.com" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:border-[#630ed4]">
-                </div>
-
-                <div>
-                    <div class="flex justify-between items-center mb-1">
-                        <label class="text-xs font-bold text-gray-700">Password</label>
-                        <a href="#" class="text-[11px] text-[#630ed4] hover:underline">Forgot password?</a>
-                    </div>
-                    <input type="password" required placeholder="••••••••" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:border-[#630ed4]">
-                </div>
-
-                <button type="submit" id="submitBtn" class="w-full bg-[#630ed4] hover:bg-[#520bb4] text-white font-bold py-2.5 rounded-lg text-sm transition cursor-pointer mt-2">
-                    Sign In
-                </button>
-            </form>
-
-            <div class="mt-6 text-center text-xs text-gray-500">
-                By continuing, you agree to Mobile World's <a href="#" class="text-[#630ed4] underline">Terms of Service</a>.
-            </div>
-        </div>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="mt-auto bg-gray-900 text-gray-400 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8 text-center text-xs text-gray-500">
-            © 2025 Mobile World. All rights reserved.
-        </div>
+				<div>
+					<h4 class="text-lg font-semibold text-purple-800">Quick Links</h4>
+					<ul class="mt-4 space-y-2 text-sm ">
+					  <li><a href="index.html" class="hover:text-purple-600">Home</a></li>
+					  <li><a href="category.html" class="hover:text-purple-600">Categories</a></li>
+					  <li><a href="best-specs.html" class="hover:text-purple-600">Best specs</a></li>
+					   <li><a href="accessories.html" class="hover:text-purple-600">Accessories</a></li>
+					  <li><a href="about.html" class="hover:text-purple-600">About Us</a></li>
+					  <li><a href="contact.html" class="hover:text-purple-600">Contact</a></li>
+					</ul>
+				</div>
+				
+				<div>
+					<h3 class="font-bold text-xl text-purple-600 mb-4">Contact</h3>
+					<p class="mb-2">📍 Chennai, Tamil Nadu, India</p>
+					<p class="tmb-2">✉️ contact@mobileworld.com</p>
+					<p class=" mb-2">📞 +91 98765 43201</p>
+				</div>
+			</div>
+			<div class="mt-8 border-t border-gray-200 pt-6 text-center text-sm text-blue-500">© 2024 Mobile World. All rights reserved.</div>
+		</div>
     </footer>
-
-    <script>
-        function switchAuthTab(type) {
-            const tabSignIn = document.getElementById('tabSignIn');
-            const tabRegister = document.getElementById('tabRegister');
-            const nameField = document.getElementById('nameField');
-            const submitBtn = document.getElementById('submitBtn');
-
-            if (type === 'register') {
-                tabRegister.className = 'py-2 rounded-md bg-white text-[#630ed4] shadow-xs cursor-pointer';
-                tabSignIn.className = 'py-2 rounded-md text-gray-600 cursor-pointer';
-                nameField.classList.remove('hidden');
-                submitBtn.innerText = 'Create Account';
-            } else {
-                tabSignIn.className = 'py-2 rounded-md bg-white text-[#630ed4] shadow-xs cursor-pointer';
-                tabRegister.className = 'py-2 rounded-md text-gray-600 cursor-pointer';
-                nameField.classList.add('hidden');
-                submitBtn.innerText = 'Sign In';
-            }
-        }
-    </script>
-</body>
+	</body>
 </html>
