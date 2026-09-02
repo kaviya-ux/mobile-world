@@ -22,7 +22,3 @@ Mobile World is a beginner-friendly static website for exploring smartphones by 
 ## How To Open
 
 Open `index.html` in a browser. Since this is a static website, no build step is needed.
-
-## Notes
-
-The product pages include a small JavaScript gallery: clicking a thumbnail swaps it with the main phone image.
